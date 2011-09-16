@@ -34,17 +34,16 @@
 #X msg -185 256 0;
 #X msg -219 255 1;
 #X obj -219 197 t b b b b;
-#X obj 56 453 hsl 128 15 0 30 0 0 empty empty densidade_ritmica -2
--8 0 10 -262144 -1 -1 1270 1;
 #X text -155 348 o bang 1 vai ter outra divisao:;
 #X text -106 391 3- abre spigot;
 #X text -106 404 4- fecha spigot;
 #X obj -219 -15 loadbang;
-#X obj 139 417 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
-1;
-#X text 156 417 ligar;
 #X obj 14 282 table densidade_minuto;
-#X obj 53 505 outlet densidade;
+#X obj 57 503 outlet densidade;
+#X obj 52 401 cnv 15 147 68 empty empty sinc-dens_ritmica 20 12 0 14
+-262130 -66577 0;
+#X obj 60 448 hsl 128 15 0 20 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 12700 1;
 #X connect 0 0 2 0;
 #X connect 1 0 0 0;
 #X connect 2 0 3 0;
@@ -55,7 +54,7 @@
 #X connect 6 0 4 0;
 #X connect 7 0 8 0;
 #X connect 8 0 30 0;
-#X connect 9 0 6 0;
+#X connect 9 0 15 0;
 #X connect 14 0 4 1;
 #X connect 15 0 6 0;
 #X connect 16 0 25 0;
@@ -67,7 +66,7 @@
 #X connect 24 2 26 0;
 #X connect 24 3 20 0;
 #X connect 25 0 18 0;
-#X connect 25 0 31 0;
+#X connect 25 0 38 0;
 #X connect 26 0 25 1;
 #X connect 27 0 25 1;
 #X connect 28 0 6 1;
@@ -76,7 +75,6 @@
 #X connect 30 1 14 0;
 #X connect 30 2 28 0;
 #X connect 30 3 24 0;
-#X connect 31 0 39 0;
-#X connect 35 0 1 0;
-#X connect 36 0 1 0;
-#X coords 0 -1 1 1 150 70 1 50 400;
+#X connect 34 0 1 0;
+#X connect 38 0 36 0;
+#X coords 0 -1 1 1 150 70 2 50 400;

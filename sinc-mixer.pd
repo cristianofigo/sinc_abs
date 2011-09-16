@@ -22,7 +22,7 @@
 -1 -1 1350 1;
 #X obj 138 39 inlet~;
 #X obj 384 52 vsl 30 128 0 2 0 0 empty empty main_volume 0 140 0 10
--203904 -1 -1 9000 1;
+-203904 -1 -1 7400 1;
 #X obj 385 200 knob 28 28 0 1 0 0 empty empty empty 0 -8 0 8 -262144
 -1 -1 1500 1;
 #X obj 90 458 scale.linear 0 1 1 0;
@@ -47,6 +47,7 @@
 #X connect 10 0 1 0;
 #X connect 10 0 2 0;
 #X connect 10 0 3 0;
+#X connect 10 0 4 0;
 #X connect 11 0 5 0;
 #X connect 11 0 6 0;
 #X connect 11 0 7 0;
@@ -148,6 +149,7 @@
 #X connect 21 0 3 0;
 #X connect 21 1 4 0;
 #X connect 21 2 5 0;
+#X connect 21 3 15 0;
 #X connect 21 4 6 0;
 #X connect 21 5 11 0;
 #X connect 21 6 13 0;
