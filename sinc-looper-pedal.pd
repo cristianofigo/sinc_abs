@@ -1,4 +1,4 @@
-#N canvas 0 36 1246 666 12;
+#N canvas 11 24 1246 666 12;
 #X obj 42 408 line~;
 #X msg 42 380 \$1 100;
 #X obj 23 442 *~;
@@ -72,7 +72,7 @@
 #X connect 13 0 12 0;
 #X restore 238 211 pd selects;
 #X obj 238 109 spigot;
-#X obj 277 85 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 277 85 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 575 18 cnv 15 185 200 empty empty empty 20 12 0 14 -204786 -66577
 0;
@@ -283,7 +283,7 @@
 #X connect 10 0 3 0;
 #X connect 11 0 10 0;
 #X restore 92 44 pd volumes looper;
-#N canvas 488 221 418 412 switch 1;
+#N canvas 770 311 418 412 switch 0;
 #X obj 42 33 cnv 15 330 360 empty empty empty 20 12 0 14 -262130 -66577
 0;
 #X obj 46 44 keyname;
@@ -367,7 +367,7 @@
 #X text 959 242 2) Looper;
 #X text 959 258 3) Sintese;
 #X text 958 274 4) Harmonizador;
-#X obj 577 210 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 577 210 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 599 232 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
