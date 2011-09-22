@@ -1,4 +1,4 @@
-#N canvas 42 24 963 690 10;
+#N canvas 0 24 963 690 10;
 #N canvas 490 199 598 338 (subpatch) 0;
 #X array \$0-array1 2e+06 float 2;
 #X coords 0 1 2e+06 -1 200 140 1;
@@ -11,9 +11,9 @@
 #X obj 707 91 perk-hihat;
 #X obj -49 131 perk-bassdrum;
 #X obj 707 59 metro 500;
-#X obj 707 27 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 707 27 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X text 772 32 metronomo;
+#X text 762 8 metronomo;
 #X obj 590 120 f;
 #X obj 623 122 + 1;
 #X floatatom 590 154 5 0 0 0 - - -;
@@ -59,14 +59,14 @@
 #X obj 394 189 * 44.1;
 #X floatatom 394 215 7 0 0 0 - - -;
 #X text 401 230 numero de samples gravados;
-#X obj 271 483 dac~;
-#X obj 270 393 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 343 453 dac~;
+#X obj 342 363 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 394 287 f;
-#X obj 375 459 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 447 430 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 394 259 t b f;
-#X msg 314 401 stop;
+#X msg 386 371 stop;
 #X obj 590 278 spigot;
 #X msg 597 252 1;
 #X msg 646 253 0;
@@ -74,24 +74,24 @@
 #X obj 708 270 *~;
 #X obj 750 259 tgl 15 0 empty empty metronomo_on/off 17 7 0 10 -262144
 -1 -1 0 1;
-#X obj 456 563 spigot;
-#X obj 489 534 tgl 15 0 empty empty loop_on/off 17 7 0 10 -262144 -1
+#X obj 528 534 spigot;
+#X obj 561 505 tgl 15 0 empty empty loop_on/off 17 7 0 10 -262144 -1
 -1 0 1;
 #X text 65 8 musico;
-#X obj 456 508 spigot;
-#X msg 465 478 1;
-#X obj 483 427 t b b;
-#X msg 497 479 0;
+#X obj 528 479 spigot;
+#X msg 537 449 1;
+#X obj 555 398 t b b;
+#X msg 569 450 0;
 #X text 687 393 vizualização;
 #X obj 158 220 s \$0-on;
 #X obj 239 215 s \$0-off;
 #X obj 189 315 tabwrite~ \$0-array1;
-#X obj 270 438 tabplay~ \$0-array1;
+#X obj 342 408 tabplay~ \$0-array1;
 #X obj 394 42 r \$0-grava;
 #X obj 414 71 r \$0-off;
 #X obj 325 255 r \$0-loop;
-#X obj 314 379 r \$0-on;
-#X obj 456 589 s \$0-loop;
+#X obj 386 349 r \$0-on;
+#X obj 528 560 s \$0-loop;
 #X obj 586 41 r \$0-on;
 #X obj 605 179 s \$0-conta;
 #X obj 597 230 r \$0-on;
@@ -104,27 +104,16 @@
 #X obj 842 559 r \$0-off;
 #X obj 791 559 r \$0-on;
 #X obj 775 656 s \$0-status;
-#X obj 281 572 s \$0-loopb;
+#X obj 355 553 s \$0-loopb;
 #X obj 323 227 r \$0-loopb;
-#X obj 281 546 spigot;
-#X obj 314 520 tgl 15 0 empty empty loop_on/off 17 7 0 10 -262144 -1
+#X obj 355 527 spigot;
+#X obj 388 501 tgl 15 0 empty empty loop_on/off 17 7 0 10 -262144 -1
 -1 0 1;
 #X text 496 352 começa a ler o loop no tempo;
 #X text 501 366 do metronomo;
-#X text 279 592 leitura do loop;
-#X text 280 608 sem metronomo;
-#X obj 707 2 loadbang;
-#X text 751 277 1) ligue;
-#X text 215 21 2) press Enter;
-#X text 587 634 3) tocar bumbo com Space;
-#X obj 776 305 cnv 15 20 10 empty empty 1 20 12 0 40 -233017 -66577
-0;
-#X obj 278 46 cnv 15 20 10 empty empty 2 20 12 0 40 -233017 -66577
-0;
-#X obj 570 602 cnv 15 20 10 empty empty 3 20 12 0 40 -233017 -66577
-0;
-#X obj 341 540 cnv 15 20 10 empty empty 4_-_4 20 12 0 40 -233017 -66577
-0;
+#X text 353 573 leitura do loop;
+#X text 354 589 sem metronomo;
+#X obj 505 194 s master;
 #X connect 1 0 2 0;
 #X connect 3 0 1 0;
 #X connect 6 0 62 0;
@@ -141,6 +130,7 @@
 #X connect 13 0 16 0;
 #X connect 13 0 69 0;
 #X connect 13 0 82 0;
+#X connect 13 0 101 0;
 #X connect 14 0 15 0;
 #X connect 15 0 11 1;
 #X connect 16 0 58 0;
@@ -221,4 +211,3 @@
 #X connect 94 0 54 0;
 #X connect 95 0 93 0;
 #X connect 96 0 95 1;
-#X connect 101 0 9 0;
