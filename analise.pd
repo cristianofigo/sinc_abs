@@ -1,4 +1,4 @@
-#N canvas 444 86 942 702 16;
+#N canvas 406 112 942 702 16;
 #X text 348 12 análise de áudio;
 #X obj 59 213 sinc-audioanalise;
 #X obj 58 11 sinc-sample;
@@ -7,10 +7,10 @@
 #X obj 113 421 dbtorms;
 #X floatatom 229 428 5 0 0 0 - - -;
 #X obj 116 499 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 734 1;
+-1 -1 0 1;
 #X obj 113 532 * 10;
 #X obj 116 578 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 7340 1;
+-1 -1 0 1;
 #X floatatom 269 580 5 0 0 0 - - -;
 #X obj 592 611 gemwin;
 #X msg 588 547 create \, 1;
@@ -20,7 +20,6 @@
 #X msg 627 212 draw line;
 #X floatatom 661 251 5 0 0 0 - - -;
 #X obj 271 463 / 100;
-#X obj 118 641 tid;
 #X connect 1 2 5 0;
 #X connect 1 2 6 0;
 #X connect 2 0 1 0;
