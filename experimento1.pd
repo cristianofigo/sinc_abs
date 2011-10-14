@@ -59,7 +59,7 @@
 #X obj 388 248 s array_dur;
 #X obj 291 247 s estabilidade;
 #X obj 412 142 sinc-dens_ritmica;
-#N canvas 561 321 450 376 mudanças 1;
+#N canvas 561 321 450 376 mudanças 0;
 #X obj 63 25 inlet estabilidade;
 #X msg 63 242 0;
 #X msg 90 242 1;
@@ -97,6 +97,7 @@
 #X obj 412 225 s densidade;
 #X obj 158 345 r estabilidade;
 #X obj 275 359 r densidade;
+#X obj 316 528 seq;
 #X connect 3 0 22 0;
 #X connect 3 1 9 0;
 #X connect 3 1 22 1;
