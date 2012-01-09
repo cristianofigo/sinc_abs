@@ -1,6 +1,6 @@
-#N canvas 264 42 1013 676 10;
-#X obj 76 359 +~;
-#X obj 205 613 dac~;
+#N canvas 264 42 851 665 10;
+#X obj 7 350 +~;
+#X obj 136 612 dac~;
 #X obj 204 32 cnv 15 240 210 empty empty sinc-mixer 20 12 0 14 -262130
 -66577 0;
 #X obj 219 54 vsl 30 128 0 1 0 0 empty empty 1 0 140 0 10 -204800 -1
@@ -11,23 +11,23 @@
 -1 10160 1;
 #X obj 221 200 knob 28 28 0 1 0 0 empty empty empty 0 -8 0 8 -262144
 -1 -1 1350 1;
-#X obj 277 348 +~;
-#X obj 75 519 *~;
-#X obj 277 518 *~;
+#X obj 208 347 +~;
+#X obj 6 497 *~;
+#X obj 208 478 *~;
 #X obj 5 46 inlet~;
 #X obj 272 201 knob 28 28 0 1 0 0 empty empty empty 0 -8 0 8 -262144
 -1 -1 1350 1;
 #X obj 65 46 inlet~;
 #X obj 331 201 knob 28 28 0 1 0 0 empty empty empty 0 -8 0 8 -262144
 -1 -1 1350 1;
-#X obj 138 39 inlet~;
+#X obj 138 44 inlet~;
 #X obj 384 52 vsl 30 128 0 2 0 0 empty empty main_volume 0 140 0 10
--203904 -1 -1 7400 1;
+-203904 -1 -1 5080 1;
 #X obj 385 200 knob 28 28 0 1 0 0 empty empty empty 0 -8 0 8 -262144
--1 -1 1500 1;
-#X obj 90 458 scale.linear 0 1 1 0;
-#X obj 75 424 *~;
-#X obj 277 412 *~;
+-1 -1 0 1;
+#X obj 21 436 scale.linear 0 1 1 0;
+#X obj 6 415 *~;
+#X obj 208 411 *~;
 #X obj 219 -29 inlet cenario_mixer;
 #N canvas 731 309 450 300 cenario 0;
 #X obj 144 35 inlet;
@@ -52,37 +52,37 @@
 #X connect 11 0 6 0;
 #X connect 11 0 7 0;
 #X restore 219 -7 pd cenario -----------------------------------;
-#X obj 6 229 *~;
-#X obj 66 237 *~;
-#X obj 138 240 *~;
-#X obj 423 613 outlet~;
-#X obj 489 609 outlet~;
-#X obj 385 578 spigot~;
-#X obj 450 582 spigot~;
-#X obj 74 561 spigot~;
-#X obj 276 558 spigot~;
+#X obj 6 245 *~;
+#X obj 66 253 *~;
+#X obj 138 256 *~;
+#X obj 359 588 outlet~;
+#X obj 425 584 outlet~;
+#X obj 321 553 spigot~;
+#X obj 386 557 spigot~;
+#X obj 5 560 spigot~;
+#X obj 207 557 spigot~;
 #X obj 425 221 tgl 15 0 empty empty bypass -8 -5 0 10 -262144 -1 -1
 0 1;
-#X obj 90 499 line~;
-#X msg 90 479 \$1 100;
-#X obj 291 499 line~;
-#X msg 291 479 \$1 100;
-#X obj 293 391 line~;
-#X msg 293 371 \$1 100;
-#X obj 91 402 line~;
-#X msg 91 382 \$1 100;
-#X obj 154 216 line~;
-#X msg 154 196 \$1 100;
-#X obj 22 206 line~;
-#X msg 22 186 \$1 100;
-#X obj 81 214 line~;
-#X msg 81 194 \$1 100;
-#X obj 76 297 sinc-pan~;
-#X obj 162 296 sinc-pan~;
-#X obj 242 295 sinc-pan~;
+#X obj 21 477 line~;
+#X msg 21 457 \$1 100;
+#X obj 222 459 line~;
+#X msg 222 439 \$1 100;
+#X obj 224 390 line~;
+#X msg 224 370 \$1 100;
+#X obj 22 393 line~;
+#X msg 22 373 \$1 100;
+#X obj 154 232 line~;
+#X msg 154 212 \$1 100;
+#X obj 22 222 line~;
+#X msg 22 202 \$1 100;
+#X obj 81 230 line~;
+#X msg 81 210 \$1 100;
+#X obj 7 296 sinc-pan~;
+#X obj 93 291 sinc-pan~;
+#X obj 173 294 sinc-pan~;
 #X obj 481 34 cnv 15 330 360 empty empty empty 20 12 0 14 -262130 -66577
 0;
-#X obj 485 43 keyname;
+#X obj 492 48 keyname;
 #X symbolatom 531 116 10 0 0 0 - - -;
 #X obj 531 168 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -110,7 +110,7 @@
 #X obj 733 234 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 531 83 spigot;
-#X obj 570 62 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 564 62 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 531 253 alternate;
 #X obj 531 280 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -122,7 +122,7 @@
 #X msg 531 305 1 1000;
 #X msg 591 300 0 1000;
 #X text 675 72 switch de geradores;
-#X obj 570 36 r teclado_global2;
+#X obj 564 36 r teclado_global2;
 #X connect 0 0 18 0;
 #X connect 3 0 43 0;
 #X connect 4 0 45 0;

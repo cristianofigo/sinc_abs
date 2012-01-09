@@ -68,7 +68,7 @@
 #X obj 63 93 sel 1;
 #X obj 63 62 change;
 #X obj 90 167 random 3;
-#X obj 227 178 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 227 178 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X connect 0 0 12 0;
 #X connect 1 0 7 0;
@@ -89,6 +89,8 @@
 #X restore 168 139 pd mudanças ritmicas;
 #X obj 412 -14 s densidade;
 #X obj 168 111 r estabilidade;
+#X obj 739 386 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
+-1 -1 2;
 #X connect 3 0 17 0;
 #X connect 3 1 4 0;
 #X connect 3 1 17 1;
@@ -136,3 +138,4 @@
 #X connect 49 0 51 0;
 #X connect 50 0 24 2;
 #X connect 52 0 50 0;
+#X connect 53 0 36 4;
