@@ -1,9 +1,9 @@
-#N canvas 17 54 674 579 16;
+#N canvas 502 24 614 452 16;
 #X obj 3 2 cnv 15 145 35 empty empty sinc-notaÃ§Ã£o 20 6 0 14 -262130
 -66577 0;
-#X obj 467 91 gemwin;
-#X msg 467 7 create \, 1;
-#X msg 483 48 0 \, destroy;
+#X obj 48 172 gemwin;
+#X msg 48 88 create \, 1;
+#X msg 1 120 0 \, destroy;
 #N canvas 0 0 1105 631 pauta 0;
 #X obj 185 90 gemhead;
 #X obj 184 499 text2d;
@@ -55,7 +55,7 @@
 #X connect 17 0 15 0;
 #X connect 18 0 1 1;
 #X restore 20 404 pd pauta inferior;
-#N canvas 366 49 1105 631 pauta 0;
+#N canvas 175 49 1105 631 pauta 0;
 #X obj 185 90 gemhead;
 #X obj 185 471 text2d;
 #X obj 184 165 translateXYZ;
@@ -310,153 +310,148 @@
 #X connect 17 0 1 1;
 #X connect 18 0 13 0;
 #X restore 409 405 pd txt inferior;
-#X obj 42 183 hradio 15 1 0 11 empty empty empty 0 -8 0 10 -262144
--1 -1 5;
-#N canvas 0 0 450 300 notas 0;
-#N canvas 357 45 923 663 nota1 0;
-#X obj 195 170 gemhead;
+#X obj 52 280 hradio 15 1 0 11 empty empty empty 0 -8 0 10 -262144
+-1 -1 8;
+#N canvas 16 24 648 355 notas 0;
+#N canvas 258 29 923 663 nota1 0;
+#X obj 194 170 gemhead;
 #X obj 195 551 text2d;
-#X obj 366 153 hsl 128 15 -8 8 0 0 empty empty X 12 8 1 12 -233017
--1 -1 6906 1;
-#X obj 366 173 hsl 200 15 -6 6 0 0 empty empty Y 12 8 1 12 -233017
+#X obj 286 169 hsl 128 15 -8 8 0 0 empty empty X 12 8 1 12 -233017
+-1 -1 6350 1;
+#X obj 375 192 hsl 200 15 -6 6 0 0 empty empty Y 12 8 1 12 -233017
 -1 -1 11282 1;
-#X obj 366 193 hsl 128 15 -6 6 0 0 empty empty Z 12 8 1 12 -233017
+#X obj 463 212 hsl 128 15 -6 6 0 0 empty empty Z 12 8 1 12 -233017
 -1 -1 9200 1;
-#X text 361 206 rotate;
-#X obj 466 299 pack f f f;
-#X obj 466 330 prepend set;
-#X obj 466 276 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 480 335 pack f f f;
+#X obj 480 366 prepend set;
+#X obj 480 317 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X msg 235 455 font pgjazz.ttf;
-#X obj 235 422 loadbang;
-#X floatatom 313 583 5 0 0 0 - - -;
-#X msg 466 360 0.700472 0.803216 2.69291;
-#X msg 646 116 -0.692913 0.80315 2.69291;
-#X obj 645 143 unpack f f f;
-#X msg 311 521 41;
-#X text 464 381 usar essa msg para guardar preset de posição;
-#N canvas 33 45 875 647 escolhe 0;
+#X msg 220 455 font pgjazz.ttf;
+#X obj 220 375 loadbang;
+#X msg 480 396 0 0.803216 2.69291;
+#X msg 543 88 -0.692913 0.80315 2.69291;
+#X obj 542 115 unpack f f f;
+#X msg 252 511 41;
+#N canvas 33 43 903 649 escolhe 0;
 #X obj 443 73 sel 0 1 2 3 4 5 6 7 8 9 10 11;
-#X text 330 383 d =;
-#X text 423 327 e;
-#X text 381 354 d# =;
-#X text 444 326 =;
+#X text 340 393 d =;
+#X text 436 322 e;
+#X text 384 357 d# =;
+#X text 450 325 =;
 #X msg 466 323 0.80315;
-#X msg 375 386 0.765;
+#X msg 370 391 0.765;
 #X text 597 228 =;
-#X text 476 294 f =;
-#X text 522 259 f# =;
+#X text 488 294 f =;
+#X text 527 263 f# =;
 #X text 576 229 g;
-#X msg 621 228 0.859843;
+#X msg 610 230 0.859843;
 #X msg 521 295 0.83;
-#X text 723 141 =;
+#X text 731 143 =;
 #X text 619 200 g# =;
-#X text 659 172 a =;
-#X text 702 141 a#;
-#X text 308 423 =;
-#X text 727 116 b =;
-#X text 229 457 c =;
-#X text 280 426 c#;
-#X text 6 380 d =;
-#X text 10 443 e;
-#X text 9 416 d# =;
-#X text 31 442 =;
-#X text 31 542 =;
-#X text 6 480 f =;
-#X text 9 516 f# =;
-#X text 10 543 g;
-#X msg 702 170 0.88;
-#X msg 768 115 0.91;
-#X msg 272 460 0.94;
-#X msg 51 383 0.965;
-#X msg 54 443 0.99;
-#X msg 54 479 1.02;
-#X msg 56 540 1.05;
+#X text 667 172 a =;
+#X text 711 142 a#;
+#X text 312 423 =;
+#X text 748 118 b =;
+#X text 237 455 c =;
+#X text 290 421 c#;
+#X msg 699 172 0.88;
+#X msg 787 118 0.91;
+#X msg 271 459 0.94;
 #X msg 325 425 0.94;
-#X msg 140 423 text \$1;
-#X obj 139 388 l2s;
-#X msg 187 355 # q;
-#X msg 139 354 q;
+#X msg 120 433 text \$1;
+#X obj 120 398 l2s;
+#X msg 168 365 # q;
+#X msg 120 364 q;
 #X msg 421 355 0.765;
-#X msg 566 259 0.83;
-#X msg 658 198 0.859843;
+#X msg 566 262 0.83;
+#X msg 656 201 0.859843;
 #X obj 431 565 f;
-#X msg 740 145 0.88;
+#X msg 751 145 0.88;
 #X obj 443 26 inlet;
 #X text 507 23 pitch-class;
-#X obj 141 592 outlet;
-#X text 148 616 acidente;
+#X obj 120 602 outlet;
+#X text 127 626 acidente;
 #X obj 431 601 outlet;
-#X text 513 599 posição Y;
-#X connect 0 0 31 0;
-#X connect 0 0 40 0;
-#X connect 0 1 36 0;
-#X connect 0 1 39 0;
+#X text 428 624 posição Y;
+#X text -54 380 d =;
+#X text -50 443 e;
+#X text -51 416 d# =;
+#X text -29 442 =;
+#X text -29 542 =;
+#X text -54 480 f =;
+#X text -51 516 f# =;
+#X text -50 543 g;
+#X msg -9 383 0.965;
+#X msg -6 443 0.99;
+#X msg -6 479 1.02;
+#X msg -4 540 1.05;
+#X connect 0 0 23 0;
+#X connect 0 0 28 0;
+#X connect 0 1 24 0;
+#X connect 0 1 27 0;
 #X connect 0 2 6 0;
-#X connect 0 2 40 0;
-#X connect 0 3 39 0;
-#X connect 0 3 41 0;
-#X connect 0 4 40 0;
+#X connect 0 2 28 0;
+#X connect 0 3 27 0;
+#X connect 0 3 29 0;
+#X connect 0 4 28 0;
 #X connect 0 4 5 0;
-#X connect 0 5 40 0;
+#X connect 0 5 28 0;
 #X connect 0 5 12 0;
-#X connect 0 6 39 0;
-#X connect 0 6 42 0;
-#X connect 0 7 40 0;
+#X connect 0 6 27 0;
+#X connect 0 6 30 0;
+#X connect 0 7 28 0;
 #X connect 0 7 11 0;
-#X connect 0 8 39 0;
-#X connect 0 8 43 0;
-#X connect 0 9 40 0;
-#X connect 0 9 29 0;
-#X connect 0 10 39 0;
-#X connect 0 10 45 0;
-#X connect 0 11 40 0;
-#X connect 0 11 30 0;
-#X connect 5 0 44 0;
-#X connect 6 0 44 0;
-#X connect 11 0 44 0;
-#X connect 12 0 44 0;
-#X connect 29 0 44 0;
-#X connect 30 0 44 0;
-#X connect 31 0 44 0;
-#X connect 32 0 44 0;
-#X connect 33 0 44 0;
-#X connect 34 0 44 0;
-#X connect 35 0 44 0;
-#X connect 36 0 44 0;
-#X connect 37 0 48 0;
-#X connect 38 0 37 0;
-#X connect 39 0 38 0;
-#X connect 40 0 38 0;
-#X connect 41 0 44 0;
-#X connect 42 0 44 0;
-#X connect 43 0 44 0;
-#X connect 44 0 50 0;
-#X connect 45 0 44 0;
-#X connect 46 0 0 0;
-#X restore 134 119 pd escolhe nota;
-#X text 199 80 pitch class;
-#X obj 134 82 inlet;
-#X obj 449 41 inlet;
+#X connect 0 8 27 0;
+#X connect 0 8 31 0;
+#X connect 0 9 28 0;
+#X connect 0 9 21 0;
+#X connect 0 10 27 0;
+#X connect 0 10 33 0;
+#X connect 0 11 28 0;
+#X connect 0 11 22 0;
+#X connect 5 0 32 0;
+#X connect 6 0 32 0;
+#X connect 11 0 32 0;
+#X connect 12 0 32 0;
+#X connect 21 0 32 0;
+#X connect 22 0 32 0;
+#X connect 23 0 32 0;
+#X connect 24 0 32 0;
+#X connect 25 0 36 0;
+#X connect 26 0 25 0;
+#X connect 27 0 26 0;
+#X connect 28 0 26 0;
+#X connect 29 0 32 0;
+#X connect 30 0 32 0;
+#X connect 31 0 32 0;
+#X connect 32 0 38 0;
+#X connect 33 0 32 0;
+#X connect 34 0 0 0;
+#X connect 48 0 32 0;
+#X connect 49 0 32 0;
+#X connect 50 0 32 0;
+#X connect 51 0 32 0;
+#X restore 102 87 pd escolhe nota;
+#X text 167 48 pitch class;
+#X obj 102 50 inlet;
+#X obj 389 48 inlet;
 #X obj 194 245 translateXYZ -0.6 0 2.69291;
-#N canvas 693 57 444 566 animax 0;
-#X msg 328 330 1;
-#X msg 51 125 0.7;
-#X msg 68 165 0.45;
-#X obj 39 504 line;
-#X msg 83 202 0.2;
-#X msg 96 233 0;
-#X msg 39 461 \$1 400;
-#X msg 103 268 -0.2;
-#X msg 105 315 -0.5;
-#X obj 206 12 inlet;
-#X obj 206 92 sel 0 1 2 3 4 5 6 7;
-#X obj 39 538 outlet;
-#X obj 325 12 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X obj 206 47 counter 7;
-#X msg 126 357 -0.8;
-#X connect 0 0 3 0;
+#N canvas 657 89 341 603 animax 0;
+#X msg 86 142 1;
+#X msg 109 179 0.7;
+#X msg 132 217 0.45;
+#X obj 86 508 line;
+#X msg 156 254 0.2;
+#X msg 179 284 0;
+#X msg 86 472 \$1 400;
+#X msg 202 319 -0.2;
+#X msg 226 349 -0.5;
+#X obj 86 12 inlet;
+#X obj 86 92 sel 0 1 2 3 4 5 6 7;
+#X obj 86 549 outlet;
+#X obj 86 47 counter 7;
+#X msg 249 378 -0.8;
+#X connect 0 0 6 0;
 #X connect 1 0 6 0;
 #X connect 2 0 6 0;
 #X connect 3 0 11 0;
@@ -465,7 +460,7 @@
 #X connect 6 0 3 0;
 #X connect 7 0 6 0;
 #X connect 8 0 6 0;
-#X connect 9 0 13 0;
+#X connect 9 0 12 0;
 #X connect 10 0 0 0;
 #X connect 10 1 1 0;
 #X connect 10 2 2 0;
@@ -473,53 +468,50 @@
 #X connect 10 4 5 0;
 #X connect 10 5 7 0;
 #X connect 10 6 8 0;
-#X connect 10 7 14 0;
-#X connect 12 0 13 0;
-#X connect 13 0 10 0;
-#X connect 14 0 6 0;
-#X restore 449 77 pd animax;
-#X text 364 134 translate;
-#X text 521 39 bang de nota nova;
-#X msg 245 498 text q;
-#X msg 361 85 0.7;
-#X obj 354 48 loadbang;
-#X connect 0 0 21 0;
-#X connect 2 0 6 0;
-#X connect 2 0 21 1;
-#X connect 3 0 6 1;
-#X connect 3 0 8 0;
-#X connect 3 0 21 2;
-#X connect 4 0 6 2;
-#X connect 4 0 8 0;
-#X connect 4 0 21 3;
-#X connect 6 0 7 0;
-#X connect 7 0 12 0;
-#X connect 8 0 6 0;
-#X connect 9 0 1 0;
-#X connect 10 0 9 0;
-#X connect 10 0 15 0;
-#X connect 10 0 13 0;
-#X connect 10 0 25 0;
-#X connect 11 0 1 1;
-#X connect 13 0 14 0;
-#X connect 14 0 2 0;
-#X connect 14 1 3 0;
-#X connect 14 2 4 0;
-#X connect 15 0 1 1;
-#X connect 17 0 1 0;
-#X connect 17 1 21 2;
-#X connect 19 0 17 0;
-#X connect 20 0 22 0;
-#X connect 21 0 1 0;
-#X connect 22 0 2 0;
-#X connect 25 0 1 0;
-#X connect 26 0 2 0;
-#X connect 27 0 26 0;
-#X restore -75 210 pd nota1;
+#X connect 10 7 13 0;
+#X connect 12 0 10 0;
+#X connect 13 0 6 0;
+#X restore 389 84 pd animax;
+#X msg 263 423 text q;
+#X msg 283 95 0.7;
+#X obj 283 63 loadbang;
+#X text 389 24 bang para nota nova;
+#X text 478 417 mensagem para guardar preset de posição;
+#X connect 0 0 18 0;
+#X connect 2 0 5 0;
+#X connect 2 0 18 1;
+#X connect 3 0 5 1;
+#X connect 3 0 7 0;
+#X connect 3 0 18 2;
+#X connect 4 0 5 2;
+#X connect 4 0 7 0;
+#X connect 4 0 18 3;
+#X connect 5 0 6 0;
+#X connect 6 0 10 0;
+#X connect 7 0 5 0;
+#X connect 8 0 1 0;
+#X connect 9 0 8 0;
+#X connect 9 0 13 0;
+#X connect 9 0 20 0;
+#X connect 11 0 12 0;
+#X connect 12 0 2 0;
+#X connect 12 1 3 0;
+#X connect 12 2 4 0;
+#X connect 13 0 1 1;
+#X connect 14 0 1 0;
+#X connect 14 1 18 2;
+#X connect 16 0 14 0;
+#X connect 17 0 19 0;
+#X connect 18 0 1 0;
+#X connect 19 0 2 0;
+#X connect 20 0 1 0;
+#X connect 21 0 2 0;
+#X connect 22 0 21 0;
+#X restore -75 180 pd nota1;
 #N canvas 357 24 923 663 nota3 0;
 #X obj 195 100 gemhead;
 #X obj 357 71 hsl 128 15 -8 8 0 0 empty empty X 12 8 1 12 -233017 -1
--1 6509 1;
+-1 6747 1;
 #X obj 357 91 hsl 200 15 -6 6 0 0 empty empty Y 12 8 1 12 -233017 -1
 -1 11282 1;
 #X obj 355 119 hsl 128 15 -6 6 0 0 empty empty Z 12 8 1 12 -233017
@@ -531,7 +523,7 @@
 #X msg 235 385 font pgjazz.ttf;
 #X obj 235 352 loadbang;
 #X floatatom 313 513 5 0 0 0 - - -;
-#X msg 466 290 0.200315 0.803216 2.69291;
+#X msg 466 290 0.500157 0.803216 2.69291;
 #X msg 646 46 -0.692913 0.80315 2.69291;
 #X obj 645 73 unpack f f f;
 #X text 494 134 translate;
@@ -721,12 +713,12 @@
 #X connect 24 0 27 0;
 #X connect 26 0 1 0;
 #X connect 27 0 1 0;
-#X restore 115 210 pd nota3;
+#X restore 115 180 pd nota3;
 #N canvas 357 24 923 663 nota6 0;
 #X obj 195 100 gemhead;
 #X obj 195 481 text2d;
 #X obj 357 105 hsl 128 15 -8 8 0 0 empty empty X 12 8 1 12 -233017
--1 -1 5953 1;
+-1 -1 7223 1;
 #X obj 357 125 hsl 200 15 -6 6 0 0 empty empty Y 12 8 1 12 -233017
 -1 -1 11282 1;
 #X obj 357 145 hsl 128 15 -6 6 0 0 empty empty Z 12 8 1 12 -233017
@@ -739,7 +731,7 @@
 #X msg 235 385 font pgjazz.ttf;
 #X obj 235 352 loadbang;
 #X floatatom 313 513 5 0 0 0 - - -;
-#X msg 466 290 -0.500157 0.803216 2.69291;
+#X msg 466 290 1.09984 0.803216 2.69291;
 #X msg 646 46 -0.692913 0.80315 2.69291;
 #X obj 645 73 unpack f f f;
 #X text 355 86 translate;
@@ -928,12 +920,12 @@
 #X connect 25 0 27 0;
 #X connect 27 0 2 0;
 #X connect 28 0 2 0;
-#X restore 65 250 pd nota6;
+#X restore 78 267 pd nota6;
 #N canvas 357 24 923 663 nota7 0;
 #X obj 195 100 gemhead;
 #X obj 195 481 text2d;
 #X obj 356 118 hsl 128 15 -8 8 0 0 empty empty X 12 8 1 12 -233017
--1 -1 5715 1;
+-1 -1 7382 1;
 #X obj 356 138 hsl 200 15 -6 6 0 0 empty empty Y 12 8 1 12 -233017
 -1 -1 11282 1;
 #X obj 356 158 hsl 128 15 -6 6 0 0 empty empty Z 12 8 1 12 -233017
@@ -946,7 +938,7 @@
 #X msg 235 385 font pgjazz.ttf;
 #X obj 235 352 loadbang;
 #X floatatom 313 513 5 0 0 0 - - -;
-#X msg 466 290 -0.8 0.803216 2.69291;
+#X msg 466 290 1.30016 0.803216 2.69291;
 #X msg 646 46 -0.692913 0.80315 2.69291;
 #X obj 645 73 unpack f f f;
 #X msg 311 451 41;
@@ -1135,12 +1127,12 @@
 #X connect 25 0 27 0;
 #X connect 27 0 2 0;
 #X connect 28 0 2 0;
-#X restore 155 250 pd nota7;
+#X restore 168 267 pd nota7;
 #N canvas 357 24 923 663 nota8 0;
 #X obj 195 100 gemhead;
 #X obj 195 481 text2d;
 #X obj 364 93 hsl 128 15 -8 8 0 0 empty empty X 12 8 1 12 -233017 -1
--1 7144 1;
+-1 7541 1;
 #X obj 364 113 hsl 200 15 -6 6 0 0 empty empty Y 12 8 1 12 -233017
 -1 -1 11282 1;
 #X obj 364 133 hsl 128 15 -6 6 0 0 empty empty Z 12 8 1 12 -233017
@@ -1153,7 +1145,7 @@
 #X msg 235 385 font pgjazz.ttf;
 #X obj 235 352 loadbang;
 #X floatatom 313 513 5 0 0 0 - - -;
-#X msg 466 290 1.00031 0.803216 2.69291;
+#X msg 466 290 1.50047 0.803216 2.69291;
 #X msg 646 46 -0.692913 0.80315 2.69291;
 #X obj 645 73 unpack f f f;
 #X text 362 74 translate;
@@ -1342,8 +1334,8 @@
 #X connect 25 0 27 0;
 #X connect 27 0 2 0;
 #X connect 28 0 2 0;
-#X restore 255 250 pd nota8;
-#N canvas 0 0 1142 447 gate 0;
+#X restore 268 267 pd nota8;
+#N canvas 138 245 1142 447 gate 0;
 #X obj 116 43 inlet;
 #X obj 116 74 t f b;
 #X obj 244 10 counter 8;
@@ -1457,11 +1449,11 @@
 #X connect 28 4 21 0;
 #X connect 28 4 23 0;
 #X connect 28 4 25 0;
-#X restore -27 124 pd gate -------------;
+#X restore -27 94 pd gate -------------;
 #N canvas 357 24 923 663 nota2 0;
 #X obj 195 100 gemhead;
 #X obj 357 75 hsl 128 15 -8 8 0 0 empty empty X 12 8 1 12 -233017 -1
--1 6707 1;
+-1 6588 1;
 #X obj 357 95 hsl 200 15 -6 6 0 0 empty empty Y 12 8 1 12 -233017 -1
 -1 11282 1;
 #X obj 357 115 hsl 128 15 -6 6 0 0 empty empty Z 12 8 1 12 -233017
@@ -1473,7 +1465,7 @@
 #X msg 235 385 font pgjazz.ttf;
 #X obj 235 352 loadbang;
 #X floatatom 313 513 5 0 0 0 - - -;
-#X msg 466 290 0.449764 0.803216 2.69291;
+#X msg 466 290 0.299843 0.803216 2.69291;
 #X msg 646 46 -0.692913 0.80315 2.69291;
 #X obj 645 73 unpack f f f;
 #X text 511 117 translate;
@@ -1663,12 +1655,12 @@
 #X connect 24 0 25 0;
 #X connect 26 0 1 0;
 #X connect 27 0 1 0;
-#X restore 25 210 pd nota2;
+#X restore 25 180 pd nota2;
 #N canvas 357 24 923 663 nota5 0;
 #X obj 195 100 gemhead;
 #X obj 195 481 text2d;
 #X obj 357 92 hsl 128 15 -8 8 0 0 empty empty X 12 8 1 12 -233017 -1
--1 6191 1;
+-1 7064 1;
 #X obj 357 112 hsl 200 15 -6 6 0 0 empty empty Y 12 8 1 12 -233017
 -1 -1 11282 1;
 #X obj 357 132 hsl 128 15 -6 6 0 0 empty empty Z 12 8 1 12 -233017
@@ -1681,7 +1673,7 @@
 #X msg 235 385 font pgjazz.ttf;
 #X obj 235 352 loadbang;
 #X floatatom 313 513 5 0 0 0 - - -;
-#X msg 466 290 -0.200315 0.803216 2.69291;
+#X msg 466 290 0.899528 0.803216 2.69291;
 #X msg 646 46 -0.692913 0.80315 2.69291;
 #X obj 645 73 unpack f f f;
 #X text 355 73 translate;
@@ -1870,12 +1862,12 @@
 #X connect 25 0 27 0;
 #X connect 27 0 2 0;
 #X connect 28 0 2 0;
-#X restore -35 250 pd nota5;
+#X restore -22 267 pd nota5;
 #N canvas 357 24 923 663 nota4 0;
 #X obj 195 100 gemhead;
 #X obj 195 481 text2d;
 #X obj 358 82 hsl 128 15 -8 8 0 0 empty empty X 12 8 1 12 -233017 -1
--1 6350 1;
+-1 6906 1;
 #X obj 358 102 hsl 200 15 -6 6 0 0 empty empty Y 12 8 1 12 -233017
 -1 -1 11282 1;
 #X obj 358 122 hsl 128 15 -6 6 0 0 empty empty Z 12 8 1 12 -233017
@@ -1887,7 +1879,7 @@
 #X msg 235 385 font pgjazz.ttf;
 #X obj 235 352 loadbang;
 #X floatatom 313 513 5 0 0 0 - - -;
-#X msg 466 290 0 0.803216 2.69291;
+#X msg 466 290 0.700472 0.803216 2.69291;
 #X msg 646 46 -0.692913 0.80315 2.69291;
 #X obj 645 73 unpack f f f;
 #X text 514 128 translate;
@@ -2076,9 +2068,9 @@
 #X connect 24 0 26 0;
 #X connect 26 0 2 0;
 #X connect 27 0 2 0;
-#X restore 215 210 pd nota4;
-#X obj 245 73 t f b;
-#X obj 219 19 inlet;
+#X restore 215 180 pd nota4;
+#X obj -27 23 t f b;
+#X obj -27 -11 inlet;
 #X connect 5 0 0 0;
 #X connect 5 1 6 0;
 #X connect 5 2 1 0;
@@ -2090,22 +2082,27 @@
 #X connect 9 0 5 0;
 #X connect 9 1 0 1;
 #X connect 9 1 6 1;
+#X connect 9 1 1 1;
+#X connect 9 1 8 1;
+#X connect 9 1 7 1;
+#X connect 9 1 2 1;
+#X connect 9 1 3 1;
+#X connect 9 1 4 1;
 #X connect 10 0 9 0;
-#X restore 6 216 pd notas entrada;
-#X obj 255 187 hradio 15 1 0 11 empty empty empty 0 -8 0 10 -262144
--1 -1 4;
+#X restore 16 313 pd notas entrada;
+#X obj 265 284 hradio 15 1 0 11 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
 #X obj 1 18 tgl 20 0 empty empty abre_notaÃ§Ã£o 17 7 0 10 -4034 -1
 -1 1 1;
-#X obj 229 18 sel 0;
-#X obj 6 109 inlet entrada;
-#X obj 219 103 inlet saida;
-#X msg 292 480 -0.39;
+#X obj 1 54 sel 0;
+#X obj 16 206 inlet entrada;
+#X obj 229 200 inlet saida;
 #N canvas 623 487 450 300 notas 0;
 #N canvas 355 361 923 663 nota1 0;
 #X obj 195 170 gemhead;
 #X obj 195 551 text2d;
 #X obj 366 153 hsl 128 15 -8 8 0 0 empty empty X 12 8 1 12 -233017
--1 -1 6707 1;
+-1 -1 7144 1;
 #X obj 366 173 hsl 200 15 -6 6 0 0 empty empty Y 12 8 1 12 -233017
 -1 -1 9303 1;
 #X obj 366 193 hsl 128 15 -6 6 0 0 empty empty Z 12 8 1 12 -233017
@@ -2118,7 +2115,7 @@
 #X msg 235 455 font pgjazz.ttf;
 #X obj 235 422 loadbang;
 #X floatatom 313 583 5 0 0 0 - - -;
-#X msg 466 360 0.449764 -0.390151 2.69291;
+#X msg 466 360 1.00031 -0.390151 2.69291;
 #X msg 311 521 41;
 #X text 464 381 usar essa msg para guardar preset de posição;
 #X text 199 80 pitch class;
@@ -3244,7 +3241,7 @@
 #N canvas 357 24 923 663 nota2 0;
 #X obj 195 100 gemhead;
 #X obj 357 75 hsl 128 15 -8 8 0 0 empty empty X 12 8 1 12 -233017 -1
--1 6945 1;
+-1 7382 1;
 #X obj 357 95 hsl 200 15 -6 6 0 0 empty empty Y 12 8 1 12 -233017 -1
 -1 9303 1;
 #X obj 357 115 hsl 128 15 -6 6 0 0 empty empty Z 12 8 1 12 -233017
@@ -3256,7 +3253,7 @@
 #X msg 235 385 font pgjazz.ttf;
 #X obj 235 352 loadbang;
 #X floatatom 313 513 5 0 0 0 - - -;
-#X msg 466 290 0.749606 -0.390151 2.69291;
+#X msg 466 290 1.30016 -0.390151 2.69291;
 #X text 511 117 translate;
 #X msg 311 451 41;
 #X text 464 311 usar essa msg para guardar preset de posição;
@@ -3871,8 +3868,8 @@
 #X connect 9 1 0 1;
 #X connect 9 1 6 1;
 #X connect 10 0 9 0;
-#X restore 219 216 pd notas saida;
-#N canvas 647 24 875 647 escolhe 0;
+#X restore 229 313 pd notas saida;
+#N canvas 405 24 875 647 escolhe 0;
 #X obj 443 73 sel 0 1 2 3 4 5 6 7 8 9 10 11;
 #X text 330 383 d =;
 #X text 423 327 e;
@@ -3971,14 +3968,14 @@
 #X connect 49 0 39 0;
 #X connect 50 0 39 0;
 #X connect 51 0 39 0;
-#X restore 484 244 pd escolhe nota;
+#X restore 191 16 pd escolhe nota;
 #X connect 2 0 1 0;
 #X connect 3 0 1 0;
 #X connect 14 0 15 0;
-#X connect 16 0 22 0;
+#X connect 16 0 21 0;
 #X connect 17 0 18 0;
 #X connect 18 0 3 0;
 #X connect 18 1 2 0;
 #X connect 19 0 15 0;
-#X connect 20 0 22 0;
+#X connect 20 0 21 0;
 #X coords 0 -1 1 1 150 40 2 0 0;

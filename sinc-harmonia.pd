@@ -1,5 +1,5 @@
-#N canvas 0 24 1272 689 10;
-#N canvas 699 172 759 505 harmonia1 0;
+#N canvas 0 24 1272 687 10;
+#N canvas 521 172 759 505 harmonia1 0;
 #X floatatom 187 98 5 0 0 0 - - -;
 #X obj 187 159 random 4;
 #X floatatom 187 188 5 0 0 0 - - -;

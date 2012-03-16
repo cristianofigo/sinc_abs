@@ -7,11 +7,11 @@
 #X msg 308 312 0 \, 1 2000 0 \, 0 200 2200;
 #X obj 365 81 metro;
 #X obj 365 126 random 1000;
-#X obj 323 11 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 323 11 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 72 210 +~;
 #X obj 455 389 metro 100;
-#X obj 455 364 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 455 364 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #N canvas 0 0 450 300 (subpatch) 0;
 #X array \$0-array1 100 float 3;
@@ -42,9 +42,11 @@
 #X obj 455 430 tabwrite~ \$0-array1;
 #X obj 256 -70 inlet;
 #X obj 256 34 switch~;
-#X obj 256 10 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 256 10 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 256 -29 t f f;
+#X obj 379 -45 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
 #X connect 0 0 2 1;
 #X connect 1 0 0 0;
 #X connect 2 0 3 0;
@@ -74,3 +76,4 @@
 #X connect 23 0 22 0;
 #X connect 24 0 23 0;
 #X connect 24 1 8 0;
+#X connect 25 0 24 0;

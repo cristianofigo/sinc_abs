@@ -1,4 +1,4 @@
-#N canvas 315 169 821 536 10;
+#N canvas 0 106 821 536 10;
 #X obj 182 302 cnv 15 165 145 empty empty sinc-audioanalise 20 6 0
 14 -262130 -66577 0;
 #X obj 60 235 bonk~;
@@ -9,7 +9,7 @@
 #X obj 628 235 round;
 #X obj 307 83 *~;
 #X obj 325 54 hsl 128 15 0 0.5 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 1460 1;
+-1 -1 2976 1;
 #X floatatom 628 385 5 0 0 0 - - -;
 #X floatatom 641 336 5 0 0 0 - - -;
 #X floatatom 648 314 5 0 0 0 - - -;
@@ -18,10 +18,10 @@
 #X obj 60 209 *~ 0.5;
 #X obj 170 38 inlet~;
 #X obj 189 335 hsl 100 15 0 1 0 0 empty empty volume_de_entrada -2
--8 0 10 -262144 -1 -1 3960 1;
+-8 0 10 -262144 -1 -1 1160 1;
 #X msg 673 423 label \$1;
 #X obj 673 444 s \$0-nota;
-#X obj 186 419 cnv 15 20 20 empty \$0-nota E2 20 12 1 40 -233017 -1
+#X obj 186 419 cnv 15 20 20 empty \$0-nota A1 20 12 1 40 -233017 -1
 0;
 #X text 185 389 nota de;
 #X text 184 397 entrada;
@@ -31,7 +31,7 @@
 #X obj 186 195 loadbang;
 #X obj 574 451 outlet;
 #X obj 762 470 outlet;
-#X obj 368 466 outlet;
+#X obj 387 473 outlet;
 #X obj 60 461 outlet;
 #X obj 273 363 vsl 15 80 0 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 3160 1;
@@ -127,7 +127,7 @@ nota;
 #X floatatom 307 227 5 0 0 0 - - -;
 #X obj 307 276 - 100;
 #X obj 479 258 vsl 30 70 0 0.01 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 151 1;
+-1 -1 5195 1;
 #X obj 387 393 s \$0-amp_attack;
 #X text 60 480 bonk;
 #X msg 186 220 0.4;
@@ -227,7 +227,7 @@ nota;
 #X connect 37 0 36 0;
 #X connect 39 0 38 0;
 #X restore 441 349 pd detecta silêncio;
-#X obj 510 395 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 510 437 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 510 460 outlet;
 #X text 509 477 silêncio;
@@ -244,6 +244,12 @@ nota;
 #X obj 560 166 r \$0_bonk;
 #X obj 479 233 dbtorms;
 #X obj 368 290 t f f f;
+#X floatatom 525 328 5 0 0 0 - - -;
+#X obj 508 386 moses 0.009;
+#X floatatom 510 409 5 0 0 0 - - -;
+#X floatatom 558 410 5 0 0 0 - - -;
+#X obj 503 368 change;
+#X obj 399 96 hip~ 240;
 #X connect 1 0 2 0;
 #X connect 2 0 21 0;
 #X connect 2 0 27 0;
@@ -257,9 +263,9 @@ nota;
 #X connect 4 0 5 0;
 #X connect 5 0 3 0;
 #X connect 6 0 13 0;
-#X connect 6 0 32 0;
 #X connect 6 0 34 0;
 #X connect 6 0 42 0;
+#X connect 6 0 64 0;
 #X connect 7 0 6 1;
 #X connect 8 0 24 0;
 #X connect 9 0 41 0;
@@ -279,14 +285,20 @@ nota;
 #X connect 35 0 36 0;
 #X connect 35 0 58 0;
 #X connect 36 0 31 1;
+#X connect 37 0 59 0;
+#X connect 37 0 63 0;
+#X connect 37 0 26 0;
 #X connect 40 0 15 0;
 #X connect 40 0 28 0;
-#X connect 42 2 43 0;
 #X connect 43 0 44 0;
 #X connect 48 0 7 0;
 #X connect 56 0 54 0;
 #X connect 57 0 37 0;
-#X connect 58 0 26 0;
 #X connect 58 1 38 0;
 #X connect 58 2 57 0;
+#X connect 60 0 61 0;
+#X connect 60 1 62 0;
+#X connect 62 0 43 0;
+#X connect 63 0 60 0;
+#X connect 64 0 32 0;
 #X coords 0 -1 1 1 170 150 1 180 300;

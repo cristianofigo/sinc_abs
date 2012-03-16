@@ -24,7 +24,7 @@
 #X obj 384 52 vsl 30 128 0 2 0 0 empty empty main_volume 0 140 0 10
 -203904 -1 -1 5080 1;
 #X obj 385 200 knob 28 28 0 1 0 0 empty empty empty 0 -8 0 8 -262144
--1 -1 0 1;
+-1 -1 1600 1;
 #X obj 21 436 scale.linear 0 1 1 0;
 #X obj 6 415 *~;
 #X obj 208 411 *~;
@@ -51,6 +51,7 @@
 #X connect 11 0 5 0;
 #X connect 11 0 6 0;
 #X connect 11 0 7 0;
+#X connect 11 0 8 0;
 #X restore 219 -7 pd cenario -----------------------------------;
 #X obj 6 245 *~;
 #X obj 66 253 *~;
@@ -123,6 +124,9 @@
 #X msg 591 300 0 1000;
 #X text 675 72 switch de geradores;
 #X obj 564 36 r teclado_global2;
+#X obj 590 11 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+2;
+#X obj 590 -16 inlet;
 #X connect 0 0 18 0;
 #X connect 3 0 43 0;
 #X connect 4 0 45 0;
@@ -153,6 +157,7 @@
 #X connect 21 4 6 0;
 #X connect 21 5 11 0;
 #X connect 21 6 13 0;
+#X connect 21 7 16 0;
 #X connect 22 0 46 0;
 #X connect 23 0 47 0;
 #X connect 24 0 48 0;
@@ -217,4 +222,6 @@
 #X connect 76 0 74 0;
 #X connect 77 0 74 0;
 #X connect 79 0 70 0;
+#X connect 80 0 15 0;
+#X connect 81 0 80 0;
 #X coords 0 -1 1 1 250 215 2 200 30;

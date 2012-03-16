@@ -32,6 +32,10 @@
 #X msg 537 148 tempo \$1;
 #X msg 390 154 Alt_L;
 #X obj 390 177 list2symbol;
+#X msg 559 452 2;
+#X msg 592 450 0;
+#X obj 715 360 tgl 40 0 empty empty empty 17 7 0 10 -258113 -1 -1 0
+2;
 #X connect 0 0 9 0;
 #X connect 1 0 0 2;
 #X connect 2 0 1 0;
@@ -57,3 +61,6 @@
 #X connect 22 0 18 2;
 #X connect 23 0 24 0;
 #X connect 24 0 18 1;
+#X connect 25 0 9 4;
+#X connect 26 0 9 4;
+#X connect 27 0 9 4;

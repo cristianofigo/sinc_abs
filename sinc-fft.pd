@@ -1,0 +1,33 @@
+#N canvas 0 0 450 300 10;
+#X obj 54 46 inlet~;
+#X obj 54 76 rfft~;
+#X obj 54 109 *~;
+#X obj 82 109 *~;
+#X obj 54 139 sqrt~;
+#X obj 207 266 block~ 1024 1;
+#X obj 54 265 tabwrite~ \$0-fft;
+#X obj 53 166 clip~ 0 1;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array \$0-fft 128 float 3;
+#A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+#X coords 0 1 127 -1 200 140 1;
+#X restore 203 119 graph;
+#X obj 122 182 loadbang;
+#X obj 122 226 metro 20;
+#X msg 122 204 1;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 0 2 1;
+#X connect 1 1 3 0;
+#X connect 1 1 3 1;
+#X connect 2 0 4 0;
+#X connect 3 0 4 0;
+#X connect 4 0 7 0;
+#X connect 7 0 6 0;
+#X connect 9 0 11 0;
+#X connect 10 0 6 0;
+#X connect 11 0 10 0;
+#X coords 0 -1 1 1 200 160 2 203 100;
