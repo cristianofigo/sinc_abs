@@ -1,0 +1,15 @@
+#N canvas 573 70 709 412 16;
+#X obj 131 13 adc~;
+#X obj 167 174 bp~;
+#X obj 168 215 sinc-fft;
+#X obj 183 62 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 9900 1;
+#X obj 180 84 mtof;
+#X floatatom 194 133 5 0 0 0 - - -;
+#X text 261 133 "Q";
+#X text 324 58 frequência central;
+#X connect 0 1 1 0;
+#X connect 1 0 2 0;
+#X connect 3 0 4 0;
+#X connect 4 0 1 1;
+#X connect 5 0 1 2;
