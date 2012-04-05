@@ -157,12 +157,14 @@
 #X obj 792 253 tgl 12 0 \$0-c4-s \$0-c4-r empty 20 8 0 8 -262144 -1
 -1 0 1;
 #X text 426 299 volume;
-#N canvas 279 157 973 539 inside 0;
-#X obj 481 437 key;
-#X floatatom 481 466 5 0 0 0 - - -;
-#X text 445 492 show keynumber;
-#X obj 182 433 r \$0-output;
-#X obj 182 458 outlet;
+#N canvas 141 24 968 390 inside 0;
+#X obj 804 315 r \$0-output;
+#X obj 804 340 outlet;
+#X obj 534 48 kbkey2 \$0 \$0-c3 72 116;
+#X text 832 17 c4;
+#X text 86 13 primeira oitava;
+#X text 327 14 segunda oitava;
+#X text 578 17 terceira oitava;
 #X obj 42 44 kbkey2 \$0 \$0-c1 48 121;
 #X obj 69 69 kbkey2 \$0 \$0-c+1 49 115;
 #X obj 41 95 kbkey2 \$0 \$0-d1 50 120;
@@ -175,7 +177,6 @@
 #X obj 40 297 kbkey2 \$0 \$0-a1 57 110;
 #X obj 70 324 kbkey2 \$0 \$0-a+1 58 106;
 #X obj 41 350 kbkey2 \$0 \$0-b1 59 109;
-#X text 86 13 first octave;
 #X obj 283 45 kbkey2 \$0 \$0-c2 60 44;
 #X obj 310 70 kbkey2 \$0 \$0-c+2 61 108;
 #X obj 282 96 kbkey2 \$0 \$0-d2 62 46;
@@ -188,8 +189,6 @@
 #X obj 281 298 kbkey2 \$0 \$0-a2 69 101;
 #X obj 311 325 kbkey2 \$0 \$0-a+2 70 52;
 #X obj 282 351 kbkey2 \$0 \$0-b2 71 114;
-#X text 327 14 second octave;
-#X obj 534 48 kbkey2 \$0 \$0-c3 72 116;
 #X obj 561 73 kbkey2 \$0 \$0-c+3 73 54;
 #X obj 533 99 kbkey2 \$0 \$0-d3 74 122;
 #X obj 562 125 kbkey2 \$0 \$0-d+3 75 55;
@@ -199,13 +198,10 @@
 #X obj 532 249 kbkey2 \$0 \$0-g3 79 111;
 #X obj 561 275 kbkey2 \$0 \$0-g+3 80 48;
 #X obj 532 301 kbkey2 \$0 \$0-a3 81 112;
-#X text 578 17 third octave;
-#X text 832 17 c4;
 #X obj 562 328 kbkey2 \$0 \$0-a+3 82 223;
 #X obj 533 354 kbkey2 \$0 \$0-b3 83 252;
 #X obj 774 50 kbkey2 \$0 \$0-c4 84 43;
 #X connect 0 0 1 0;
-#X connect 3 0 4 0;
 #X restore 604 340 pd inside;
 #X obj 654 457 outlet;
 #X text 332 78 input volume 0 - 1;
