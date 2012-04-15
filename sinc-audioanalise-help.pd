@@ -1,10 +1,43 @@
-#N canvas 633 25 487 563 10;
-#X obj -5 139 sinc-sample;
-#X obj -5 179 sinc-audioanalise;
-#X obj 150 109 bng 15 250 50 0 empty empty abrir_arquiv -6 -5 0 5 -262144
+#N canvas 81 24 1103 880 24;
+#X obj 7 12 sinc-sample;
+#X obj 676 226 sinc-audioanalise;
+#X obj 453 469 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj -5 109 hradio 10 1 0 12 empty empty navega_pasta 0 -8 0 8 -262144
--1 -1 0;
-#X connect 0 0 1 0;
-#X connect 2 0 0 1;
-#X connect 3 0 0 0;
+#X obj 490 463 outlet~;
+#X text 424 492 bonk;
+#X floatatom 601 465 5 0 0 0 - - -;
+#X text 550 495 env-db2rms;
+#X obj 701 508 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 638 527 silencio;
+#X floatatom 735 467 5 0 0 0 - - -;
+#X text 738 502 nota;
+#X text 751 528 midi;
+#X floatatom 850 470 5 0 0 0 - - -;
+#X text 857 507 classe;
+#X floatatom 953 472 5 0 0 0 - - -;
+#X text 964 520 registro;
+#X obj 6 204 sinc-3filtros;
+#X obj 7 825 s~ filtrado;
+#X obj 840 160 r~ filtrado;
+#X obj 298 129 dac~;
+#X obj 301 80 *~;
+#X obj 340 48 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 679 61 hsl 128 15 0 2 0 0 empty empty volume_bonk -2 -8 0 10
+-262144 -1 -1 7200 1;
+#X connect 0 0 16 0;
+#X connect 0 0 20 0;
+#X connect 1 0 2 0;
+#X connect 1 1 3 0;
+#X connect 1 2 5 0;
+#X connect 1 3 7 0;
+#X connect 1 4 9 0;
+#X connect 1 5 12 0;
+#X connect 1 6 14 0;
+#X connect 16 0 17 0;
+#X connect 18 0 1 1;
+#X connect 20 0 19 0;
+#X connect 20 0 19 1;
+#X connect 21 0 20 1;
+#X connect 22 0 1 0;

@@ -1,13 +1,13 @@
-#N canvas 379 48 859 644 24;
-#X obj -109 51 keyname;
-#X symbolatom -14 101 10 0 0 0 - - -;
-#X obj -54 200 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X floatatom -109 106 5 0 0 0 - - -;
-#X obj -126 158 spigot;
-#X obj -126 207 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X floatatom -126 271 5 0 0 0 - - -;
+#N canvas 93 24 1087 850 24;
+#X obj 14 91 keyname;
+#X symbolatom 106 231 10 0 0 0 - - -;
+#X obj 66 330 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X floatatom 11 236 5 0 0 0 - - -;
+#X obj -6 288 spigot;
+#X obj -6 337 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X floatatom -6 401 5 0 0 0 - - -;
 #N canvas 5 160 450 300 selects 0;
 #X obj 35 252 outlet;
 #X msg 20 211 1;
@@ -48,45 +48,50 @@
 #X connect 12 3 2 0;
 #X connect 12 3 8 0;
 #X connect 13 0 12 0;
-#X restore -126 323 pd selects;
-#X obj 13 386 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X restore -6 453 pd selects;
+#X obj 133 516 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj -126 226 counter 3;
-#X obj -126 377 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-0 1;
-#X obj -81 385 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj -6 356 counter 3;
+#X obj -6 507 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj -35 384 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 39 515 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj -14 143 select Control_L;
-#X obj -78 582 sinctest_fm1;
-#X obj 115 563 sinctest_fm2;
-#X obj 306 555 sinctest_fmdelay;
-#X obj 395 499 sinctest_fmdelay2;
-#X text -105 11 seleciona;
-#X obj 281 41 keyname;
-#X symbolatom 376 91 10 0 0 0 - - -;
-#X obj 336 190 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 85 514 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 106 273 select Control_L;
+#X obj 42 712 sinctest_fm1;
+#X obj 235 693 sinctest_fm2;
+#X obj 426 685 sinctest_fmdelay;
+#X obj 515 629 sinctest_fmdelay2;
+#X text 18 51 seleciona;
+#X obj 404 81 keyname;
+#X symbolatom 496 221 10 0 0 0 - - -;
+#X obj 456 320 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X floatatom 281 96 5 0 0 0 - - -;
-#X obj 264 148 spigot;
-#X text 285 1 aciona;
-#X obj 376 133 select Space;
-#X obj -78 532 spigot;
-#X obj 115 522 spigot;
-#X obj 285 512 spigot;
-#X obj 395 458 spigot;
-#X floatatom 265 258 5 0 0 0 - - -;
-#X obj 264 220 counter 1;
-#X obj 28 537 tgl 40 0 empty empty empty 17 7 0 10 -261682 -1 -1 0
+#X floatatom 401 226 5 0 0 0 - - -;
+#X obj 384 278 spigot;
+#X text 408 41 aciona;
+#X obj 496 263 select Space;
+#X obj 42 662 spigot;
+#X obj 235 652 spigot;
+#X obj 405 642 spigot;
+#X obj 515 588 spigot;
+#X floatatom 385 388 5 0 0 0 - - -;
+#X obj 384 350 counter 1;
+#X obj 148 667 tgl 40 0 empty empty empty 17 7 0 10 -261682 -1 -1 0
 1;
-#X obj 218 517 tgl 40 0 empty empty empty 17 7 0 10 -261682 -1 -1 0
+#X obj 338 647 tgl 40 0 empty empty empty 17 7 0 10 -261682 -1 -1 0
 1;
-#X obj 338 457 tgl 40 0 empty empty empty 17 7 0 10 -261682 -1 -1 0
+#X obj 458 587 tgl 40 0 empty empty empty 17 7 0 10 -261682 -1 -1 0
 1;
-#X obj 498 457 tgl 40 0 empty empty empty 17 7 0 10 -261682 -1 -1 0
+#X obj 618 587 tgl 40 0 empty empty empty 17 7 0 10 -261682 -1 -1 0
 1;
-#X connect 0 0 3 0;
+#X obj -26 156 spigot;
+#X obj 372 156 spigot;
+#X obj 316 0 inlet;
+#X obj 316 61 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X connect 0 0 36 0;
 #X connect 0 1 1 0;
 #X connect 1 0 13 0;
 #X connect 2 0 4 0;
@@ -104,7 +109,7 @@
 #X connect 11 0 27 1;
 #X connect 12 0 28 1;
 #X connect 13 0 2 0;
-#X connect 19 0 22 0;
+#X connect 19 0 37 0;
 #X connect 19 1 20 0;
 #X connect 20 0 25 0;
 #X connect 21 0 23 0;
@@ -124,3 +129,8 @@
 #X connect 30 0 28 0;
 #X connect 30 0 29 0;
 #X connect 31 0 30 0;
+#X connect 36 0 3 0;
+#X connect 37 0 22 0;
+#X connect 38 0 39 0;
+#X connect 39 0 36 1;
+#X connect 39 0 37 1;

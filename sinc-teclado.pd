@@ -4,7 +4,7 @@
 -1 -1 7620 1;
 #X obj 288 77 inlet;
 #X obj 299 480 show-pitchclass;
-#X msg 331 514;
+#X msg 331 514 C;
 #X msg 498 58 0.6;
 #X obj 284 174 cnv 15 550 120 tritri empty empty 20 12 0 14 -66577
 -66577 0;
@@ -210,7 +210,7 @@
 #X obj 299 537 outlet;
 #X text 688 91 input on/off teclado;
 #X text 349 537 out pitchclass;
-#X obj 816 299 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 816 299 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X text 778 296 liga;
 #X obj 496 300 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
@@ -218,7 +218,7 @@
 #X text 631 293 programa;
 #X obj 507 425 unpack f f;
 #X text 297 565 (colocar num canvas na GUI);
-#X msg 604 521 61 0;
+#X msg 604 521 48 0;
 #X text 163 146 diminuir essa porra;
 #X text 699 454 output midi pitch do teclado;
 #X obj 526 457 * 60;

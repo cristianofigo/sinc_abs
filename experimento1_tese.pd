@@ -68,7 +68,7 @@
 #X obj 63 93 sel 1;
 #X obj 63 62 change;
 #X obj 90 167 random 3;
-#X obj 227 178 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 227 178 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X connect 0 0 12 0;
 #X connect 1 0 7 0;
@@ -106,7 +106,7 @@
 #X obj 540 138 loadbang;
 #X obj 752 375 loadbang;
 #X obj 483 106 t b f;
-#N canvas 560 218 720 428 samples 0;
+#N canvas 560 218 720 428 samples 1;
 #X obj 77 195 soundfiler;
 #X obj 347 238 outlet~;
 #X obj 50 316 table audio-sample;
@@ -131,7 +131,7 @@
 #X connect 10 0 9 0;
 #X restore 246 -102 pd samples;
 #X obj 246 -151 hradio 15 1 0 3 empty empty empty 0 -8 0 10 -262144
--1 -1 1;
+-1 -1 0;
 #X obj 246 -132 t b b b b f;
 #X obj 247 -80 s~ sample;
 #X obj 631 101 r~ sample;
@@ -199,8 +199,8 @@
 #X connect 67 0 65 0;
 #X connect 68 0 63 0;
 #X connect 68 1 56 0;
-#X connect 69 0 9 0;
 #X connect 69 0 72 0;
+#X connect 69 0 9 0;
 #X connect 70 0 71 0;
 #X connect 71 0 69 1;
 #X connect 71 4 69 0;
