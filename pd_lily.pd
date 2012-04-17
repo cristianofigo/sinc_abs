@@ -1,0 +1,17 @@
+#N canvas 354 47 891 820 16;
+#X obj 599 333 sinc-midiin;
+#X obj 464 577 shell;
+#X obj 257 209 sinc-midilive;
+#X text 61 399 tmp.mid;
+#X msg 414 503 midi2ly tmp.lid tmp.ly;
+#X obj 368 678 prepend set;
+#X msg 371 713 ders-2.1.1;
+#X msg 501 532 ls;
+#X obj 534 674 print;
+#X obj 53 18 sinc-teclado;
+#X connect 1 0 5 0;
+#X connect 1 0 8 0;
+#X connect 4 0 1 0;
+#X connect 5 0 6 0;
+#X connect 7 0 1 0;
+#X connect 9 1 2 2;
