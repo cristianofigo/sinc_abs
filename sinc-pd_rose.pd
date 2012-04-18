@@ -1,4 +1,4 @@
-#N canvas 292 48 811 866 24;
+#N canvas 103 51 1061 848 24;
 #X obj 204 168 convert.bpm2ms;
 #X msg 116 66 120;
 #X obj 81 251 t b f;
@@ -15,6 +15,27 @@
 #X obj 139 576 noteout 3;
 #X obj 19 195 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
+#X floatatom 444 128 5 0 0 0 - - -;
+#X floatatom 542 128 5 0 0 0 - - -;
+#X floatatom 269 15 5 0 0 0 - - -;
+#X obj 514 8 notein 8;
+#X obj 474 207 sel 100;
+#X obj 138 697 sinc-midiin;
+#X obj 702 636 sinc-midilive;
+#X obj 405 350 sinc-teclado;
+#N canvas 415 60 848 491 lily 1;
+#X obj 225 300 shell;
+#X obj 234 366 print;
+#X msg 86 81 midi2ly /home/livre/sinc_abs/tmp.mid;
+#X msg 227 170 lilypond /home/livre/sinc_abs/tmp-midi.ly;
+#X msg 264 214 evince /home/livre/sinc_abs/tmp-midi.pdf;
+#X msg 161 128 convert-ly -e -n /home/livre/sinc_abs/tmp-midi.ly;
+#X connect 0 0 1 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 0;
+#X connect 4 0 0 0;
+#X connect 5 0 0 0;
+#X restore 521 672 pd lily;
 #X connect 0 0 2 0;
 #X connect 0 0 6 0;
 #X connect 1 0 0 0;
@@ -32,3 +53,8 @@
 #X connect 11 1 10 0;
 #X connect 11 1 9 0;
 #X connect 13 0 3 0;
+#X connect 15 0 18 0;
+#X connect 17 0 14 0;
+#X connect 17 1 15 0;
+#X connect 18 0 1 0;
+#X connect 21 1 20 2;
