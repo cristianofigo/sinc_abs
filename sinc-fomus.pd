@@ -1,0 +1,71 @@
+#N canvas 291 135 861 650 10;
+#X floatatom 133 153 5 0 0 0 time - -;
+#X floatatom 275 173 5 0 0 0 grace_time - -;
+#X floatatom 430 170 5 0 0 0 duration - -;
+#X floatatom 508 179 5 0 0 0 voice - -;
+#X floatatom 510 263 5 0 0 0 pitch - -;
+#X floatatom 547 318 5 0 0 0 dynamic_level - -;
+#X msg 516 199 list 1 2;
+#X msg 36 257 part mypart;
+#X msg 547 461 symbol mypart;
+#X msg 550 377 list >;
+#X obj 52 327 bng 15 250 50 0 empty empty send_note 17 7 0 10 -262144
+-1 -1;
+#X msg 41 201 flush;
+#X msg 141 260 send part <id: mypart inst: piano>;
+#X obj 240 440 fomus _____________;
+#X text 33 397 process the score;
+#X text 530 362 articulation marks;
+#X text 26 184 flush output messages;
+#X text 143 230 send a line in `.fms' file format (use this to define
+instruments \, parts \, etc.);
+#X text 547 166 voices can be a number or a list;
+#X text 27 241 select a part;
+#X msg 150 55 new;
+#X msg 173 91 clear;
+#X msg 558 398 list x mytext;
+#X text 178 54 create a fresh new score;
+#X text 214 84 clear note events from the current score (saving instrument
+\, part definitions \, etc.);
+#X msg 293 334 rest*;
+#X msg 295 360 mark*;
+#X text 246 290 send note/rest/mark;
+#X text 26 299 (same as sending a `note*' message);
+#X msg 289 308 note*;
+#X text 65 505 the inlets are from left to right: bang/command time
+grtime dur voice pitch dyn mark part to send a note event: 1 optionally
+send a `new' or `clear' message 2 either load a `.fms' file with instrument/part
+definitions or use the `send' message to create them 3 send all arguments
+(e.g. \, time \, dur \, pitch) to the inlets--these values are stored
+internally and may be updated at any time 4 send a `bang' or `note*'
+message to send the note event to fomus 5 send a `run' message to process
+the score;
+#X msg 191 128 load /project/directory/partdefs.fms;
+#X text 250 22 FOMUS EXAMPLE;
+#X text 173 460 `fomus' takes no arguments (the underscores are there
+so you can see the inputs);
+#X text 510 431 select a part (must send part ID as a symbol);
+#X msg 10 415 run /output/directory/out.ly;
+#X msg 29 466 run /home/livre/out.ly;
+#X connect 0 0 13 1;
+#X connect 1 0 13 2;
+#X connect 2 0 13 3;
+#X connect 3 0 13 4;
+#X connect 4 0 13 5;
+#X connect 5 0 13 6;
+#X connect 6 0 13 4;
+#X connect 7 0 13 0;
+#X connect 8 0 13 8;
+#X connect 9 0 13 7;
+#X connect 10 0 13 0;
+#X connect 11 0 13 0;
+#X connect 12 0 13 0;
+#X connect 20 0 13 0;
+#X connect 21 0 13 0;
+#X connect 22 0 13 7;
+#X connect 25 0 13 0;
+#X connect 26 0 13 0;
+#X connect 29 0 13 0;
+#X connect 31 0 13 0;
+#X connect 35 0 13 0;
+#X connect 36 0 13 0;

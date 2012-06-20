@@ -1,23 +1,23 @@
-#N canvas 12 24 530 687 10;
+#N canvas 561 24 530 687 10;
 #X obj 23 15 sinc-audioanalise;
 #X obj 22 -122 sinc-audioin;
-#X obj 261 214 nbx 5 20 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 20
--262144 -1 -1 13 256;
-#X text 267 195 nota;
+#X obj 261 240 nbx 5 20 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 20
+-262144 -1 -1 0 256;
+#X text 263 215 nota;
 #X floatatom 77 173 5 0 0 0 - - -;
 #X obj 77 222 vsl 30 70 0 0.01 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 400 1;
+-1 -1 0 1;
 #X obj 77 197 dbtorms;
 #X obj 77 300 scale.linear 0 0.01 1 127;
 #X obj 80 322 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 830 1;
+-1 -1 0 1;
 #X obj 23 175 s atak;
-#X obj 139 206 s silencio;
+#X obj 155 244 s silencio;
 #X obj 374 154 r atak;
 #X obj 421 220 r silencio;
 #X obj 374 291 timer;
 #X obj 374 317 nbx 5 20 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 20
--262144 -1 -1 78589.3 256;
+-262144 -1 -1 0 256;
 #X obj 401 264 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X text 401 345 duração de cada nota;
@@ -28,12 +28,19 @@
 #X obj 374 263 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 374 223 t b b;
+#X obj 127 514 outlet;
+#X obj 127 476 pack f f;
+#X obj 72 399 r atak;
+#X msg 72 427 1;
+#X obj 127 399 r silencio;
+#X msg 127 426 0;
 #X connect 0 0 9 0;
 #X connect 0 2 4 0;
 #X connect 0 3 10 0;
 #X connect 0 4 2 0;
 #X connect 1 0 0 0;
 #X connect 2 0 17 0;
+#X connect 2 0 24 1;
 #X connect 4 0 6 0;
 #X connect 5 0 7 0;
 #X connect 6 0 5 0;
@@ -49,3 +56,8 @@
 #X connect 21 0 13 0;
 #X connect 22 0 21 0;
 #X connect 22 1 15 0;
+#X connect 24 0 23 0;
+#X connect 25 0 26 0;
+#X connect 26 0 24 0;
+#X connect 27 0 28 0;
+#X connect 28 0 24 0;
