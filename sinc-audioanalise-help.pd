@@ -19,13 +19,13 @@
 #X text 964 520 registro;
 #X obj 6 204 sinc-3filtros;
 #X obj 7 825 s~ filtrado;
-#X obj 840 160 r~ filtrado;
+#X obj 668 133 r~ filtrado;
 #X obj 298 129 dac~;
 #X obj 301 80 *~;
 #X obj 340 48 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 679 61 hsl 128 15 0 2 0 0 empty empty volume_bonk -2 -8 0 10
--262144 -1 -1 7200 1;
+#X obj 885 143 hsl 128 15 0 2 0 0 empty empty volume_bonk -2 -8 0 10
+-262144 -1 -1 6400 1;
 #X connect 0 0 16 0;
 #X connect 0 0 20 0;
 #X connect 1 0 2 0;
@@ -36,8 +36,8 @@
 #X connect 1 5 12 0;
 #X connect 1 6 14 0;
 #X connect 16 0 17 0;
-#X connect 18 0 1 1;
+#X connect 18 0 1 0;
 #X connect 20 0 19 0;
 #X connect 20 0 19 1;
 #X connect 21 0 20 1;
-#X connect 22 0 1 0;
+#X connect 22 0 1 1;

@@ -19,15 +19,14 @@
 #X obj -10 126 bng 15 250 50 0 empty empty abrir 17 7 0 10 -262144
 -1 -1;
 #X obj 191 222 prepend set;
-#X msg 193 246 open /home/livre/pesquisa/SINCOPA/samples/ 0;
+#X msg 193 246 open /home/livre/sinc_abs/samples/violao1.wav;
 #X obj -93 61 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144 -1
--1 1;
+-1 0;
 #X obj -93 85 select 0 1 2 3 4 5;
-#X obj 61 119 tgl 15 0 empty empty loop 17 7 0 10 -262144 -1 -1 0 1
+#X obj 61 119 tgl 15 0 empty empty loop 17 7 0 10 -262144 -1 -1 1 1
 ;
 #X obj 128 340 prepend set;
-#X msg 157 372 open /home/livre/pesquisa/SINCOPA/samples/maria-tarrega.wav
-;
+#X msg 157 372 open /home/livre/sinc_abs/samples/violao1.wav;
 #X obj -93 155 bng 15 250 50 0 empty empty stop 17 7 0 10 -262144 -1
 -1;
 #X text 40 59 samples;
@@ -37,6 +36,8 @@
 #X msg 193 81 open /home/livre/pesquisa/SINCOPA/samples/vlao2.wav;
 #X msg 191 106 open /home/livre/pesquisa/SINCOPA/samples/preludio998.wav
 ;
+#X obj 19 156 bng 15 250 50 0 empty empty play 17 7 0 10 -262144 -1
+-1;
 #X connect 1 0 3 0;
 #X connect 1 1 6 0;
 #X connect 1 1 8 0;
@@ -69,4 +70,5 @@
 #X connect 25 0 13 0;
 #X connect 26 0 13 0;
 #X connect 27 0 13 0;
+#X connect 28 0 9 0;
 #X coords 0 -1 1 1 235 180 2 -110 15;
