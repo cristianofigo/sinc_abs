@@ -1,9 +1,8 @@
-#N canvas 209 24 886 667 10;
+#N canvas 490 24 757 667 10;
 #N canvas 0 0 450 300 (subpatch) 0;
-#X array pitch_original 8 float 1;
-#A 0 60.7789 63.5005 55.336 46.2645 51.7076 48.9862 40.8216 38.1002
-;
-#X coords 0 127 7 0 200 140 1;
+#X array pitch_original 8 float 3;
+#A 0 77 77 79 81 80 57 57 57;
+#X coords 0 127 8 0 200 140 1;
 #X restore 382 18 graph;
 #N canvas 0 0 502 244 aparencia 0;
 #X msg 50 122 \; contorno xticks 0 1 1;
@@ -18,22 +17,18 @@
 #X connect 6 0 3 0;
 #X connect 6 0 0 0;
 #X connect 6 0 1 0;
-#X restore 205 420 pd aparencia array;
+#X restore 196 61 pd aparencia array;
 #N canvas 0 0 450 300 (subpatch) 0;
 #X array pitch_resultado 8 float 1;
-#A 0 40.043 35.7999 48.5288 62.6717 54.1856 58.4284 71.1575 75.4003
+#A 0 63.3283 54.8422 59.085 71.8141 76.0569 40.6996 36.4565 49.1854
 ;
 #X coords 0 127 7 0 200 140 1;
 #X restore 383 188 graph;
-#X text 338 580 idéia: fazer integração com o MusicContour;
-#X text 381 592 do di Silva;
 #N canvas 0 0 450 300 (subpatch) 0;
 #X array contorno 8 float 1;
-#A 0 7.14282 8 5.42854 2.5714 4.28574 3.42861 0.857125 0;
+#A 0 2.62685 5.61194 5.85075 4.0597 0 3.10448 8 8;
 #X coords 0 8 7 0 200 140 1;
 #X restore 383 355 graph;
-#X text 337 556 pergunta: como saber o menor valor de uma array? (vanilla)
-;
 #N canvas 0 0 476 581 reduz 0;
 #X floatatom 118 191 5 0 0 0 - - -;
 #X obj 118 168 tabread pitch_original;
@@ -46,8 +41,8 @@
 #X floatatom 181 339 5 0 0 0 max - -;
 #X msg 364 213 set;
 #X msg 145 236 add2 \$1;
-#X msg 118 278 63.5005 55.336 46.2645 51.7076 48.9862 40.8216 38.1002
-60.7789;
+#X msg 118 278 99.786 101.6 87.9932 57.1505 80.7361 117.929 117.929
+77.1075;
 #X obj 118 316 list-minmax;
 #X obj 118 75 t f b;
 #X obj 118 362 s min;
@@ -64,6 +59,7 @@
 #X obj 118 27 t b b;
 #X obj 118 5 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
+#X obj 218 21 inlet;
 #X connect 0 0 16 0;
 #X connect 1 0 0 0;
 #X connect 2 0 1 0;
@@ -94,7 +90,8 @@
 #X connect 25 0 5 0;
 #X connect 25 1 5 0;
 #X connect 26 0 25 0;
-#X restore 204 399 pd reduz contorno;
+#X connect 27 0 26 0;
+#X restore 195 40 pd reduz contorno;
 #X text -99 10 normalização;
 #X obj 228 610 list-wrandom;
 #N canvas 0 0 787 512 retrogrado 0;
@@ -159,7 +156,7 @@
 #X obj -108 460 noteout;
 #X obj -108 342 counter 7;
 #X obj -108 395 int;
-#N canvas 331 24 731 402 rj 1;
+#N canvas 331 24 731 402 rj 0;
 #X obj 43 148 c_patternchange;
 #N canvas 0 0 450 300 show 0;
 #X obj 41 39 inlet;
@@ -187,8 +184,8 @@
 #X connect 4 0 5 0;
 #X connect 5 0 2 0;
 #X restore 43 209 pd show;
-#X msg 43 241 40.043 35.7999 48.5288 62.6717 54.1856 58.4284 71.1575
-75.4003;
+#X msg 43 241 63.3283 54.8422 59.085 71.8141 76.0569 40.6996 36.4565
+49.1854;
 #X msg -50 301 \; pitch_resultado 0 \$1 \$2 \$3 \$4 \$5 \$6 \$7 \$8
 ;
 #X obj 130 125 tabdump temp;
@@ -225,7 +222,7 @@
 #X restore 74 260 pd rj;
 #X obj 74 231 t a b;
 #X obj -157 28 hsl 128 15 0 2 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 9900 1;
+-1 -1 0 1;
 #N canvas 177 53 281 308 normalizacao 0;
 #X floatatom -112 185 5 0 0 0 - - -;
 #X obj -112 272 tabwrite pitch_resultado;
@@ -279,28 +276,47 @@
 #X connect 10 0 6 0;
 #X connect 10 2 9 1;
 #X restore 228 633 pd transposicao crua;
-#X msg 74 303 retro-inversion 83;
+#X msg 74 303 inversion;
 #X text 151 284 última operação;
-#X connect 12 0 31 0;
-#X connect 13 0 31 0;
-#X connect 14 0 15 0;
-#X connect 15 0 31 0;
-#X connect 16 0 31 0;
-#X connect 17 0 31 0;
-#X connect 18 0 17 0;
-#X connect 19 0 31 0;
-#X connect 20 0 19 0;
-#X connect 21 0 31 0;
-#X connect 22 0 21 0;
-#X connect 23 0 28 0;
-#X connect 24 0 23 0;
-#X connect 25 0 29 0;
-#X connect 26 0 27 0;
-#X connect 26 1 27 1;
-#X connect 28 0 25 0;
-#X connect 29 0 26 0;
-#X connect 30 0 36 0;
+#N canvas 0 0 450 300 perguntas 0;
+#X text 18 130 idéia: fazer integração com o MusicContour;
+#X text 61 142 do di Silva;
+#X text 17 106 pergunta: como saber o menor valor de uma array? (vanilla)
+;
+#X restore 376 630 pd perguntas;
+#X obj 195 15 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 117 373 inlet;
+#X obj 117 495 tabwrite pitch_original;
+#X obj 144 420 counter 7;
+#X floatatom 144 442 5 0 0 0 - - -;
+#X obj 117 395 t f b;
+#X connect 9 0 28 0;
+#X connect 10 0 28 0;
+#X connect 11 0 12 0;
+#X connect 12 0 28 0;
+#X connect 13 0 28 0;
+#X connect 14 0 28 0;
+#X connect 15 0 14 0;
+#X connect 16 0 28 0;
+#X connect 17 0 16 0;
+#X connect 18 0 28 0;
+#X connect 19 0 18 0;
+#X connect 20 0 25 0;
+#X connect 21 0 20 0;
+#X connect 22 0 26 0;
+#X connect 23 0 24 0;
+#X connect 23 1 24 1;
+#X connect 25 0 22 0;
+#X connect 26 0 23 0;
+#X connect 27 0 33 0;
+#X connect 28 0 27 0;
+#X connect 28 1 27 1;
+#X connect 29 0 31 0;
 #X connect 31 0 30 0;
-#X connect 31 1 30 1;
-#X connect 32 0 34 0;
-#X connect 34 0 33 0;
+#X connect 36 0 4 0;
+#X connect 37 0 41 0;
+#X connect 39 0 40 0;
+#X connect 40 0 38 1;
+#X connect 41 0 38 0;
+#X connect 41 1 39 0;

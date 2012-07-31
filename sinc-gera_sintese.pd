@@ -1,4 +1,4 @@
-#N canvas 30 265 1250 535 10;
+#N canvas 28 73 1250 535 10;
 #X obj 451 106 cnv 15 235 110 empty empty sinc-gera_sintese 15 6 0
 14 -262130 -66577 0;
 #X obj 450 197 cnv 15 20 20 empty tipo_synth resintese 20 12 1 15 -262130
@@ -8,7 +8,7 @@
 -1;
 #N canvas 0 0 450 300 (subpatch) 0;
 #X array \$0-nota 8 float 3;
-#A 0 64 60 57 57 53 29 76 65;
+#A 0 45 45 51 56 56 51 39 44;
 #X coords 0 127 8 0 90 50 1;
 #X restore 594 148 graph;
 #X obj 92 78 tabwrite \$0-nota;
@@ -639,17 +639,17 @@
 #X connect 18 0 12 1;
 #X restore 306 283 pd banco de osciladores;
 #X obj 290 309 *~;
-#X obj 70 362 *~;
-#X obj 274 356 *~;
 #X obj 110 322 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 258 314 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
+#X obj 70 362 *~ 1;
+#X obj 274 356 *~ 1;
 #X connect 0 0 5 0;
 #X connect 1 0 10 0;
 #X connect 3 0 7 0;
 #X connect 4 0 3 0;
-#X connect 5 0 14 0;
+#X connect 5 0 16 0;
 #X connect 6 0 10 1;
 #X connect 6 0 5 1;
 #X connect 6 0 13 0;
@@ -661,11 +661,11 @@
 #X connect 11 0 0 0;
 #X connect 11 1 12 0;
 #X connect 12 0 13 1;
-#X connect 13 0 15 1;
-#X connect 14 0 2 0;
-#X connect 15 0 2 0;
-#X connect 16 0 14 1;
-#X connect 17 0 15 0;
+#X connect 13 0 17 1;
+#X connect 14 0 16 1;
+#X connect 15 0 17 0;
+#X connect 16 0 2 0;
+#X connect 17 0 2 0;
 #X restore 1054 78 pd gerador_resintese;
 #X obj 1055 -83 inlet~;
 #N canvas 618 89 660 523 fm1-------- 0;
@@ -679,7 +679,7 @@
 #X floatatom 231 86 0 0 0 0 - - -;
 #X obj 49 259 *~;
 #X obj 316 96 vsl 15 90 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 26 1;
 #X obj 161 3 bng 15 250 50 0 empty empty pausa 17 7 0 10 -262144 -1
 -1;
 #X floatatom 316 -3 5 0 0 0 amp - -;
@@ -705,7 +705,7 @@
 #X msg 389 172 0 300;
 #X msg 437 173 0.4 300;
 #X obj 326 256 vsl 15 90 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 8861 1;
 #X obj 179 208 scale.linear 0 1 1 -0.5;
 #X connect 0 0 2 0;
 #X connect 1 0 9 0;
@@ -752,7 +752,7 @@
 #X obj 46 149 noise~;
 #X obj 97 268 *~;
 #X obj 340 128 vsl 15 80 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 24 1;
 #X obj 97 229 vcf~;
 #X floatatom 243 95 5 0 0 0 - - -;
 #X obj 97 291 *~;
@@ -777,6 +777,7 @@
 #X obj 107 178 *~ 2000;
 #X obj 107 122 / 200;
 #X obj 412 187 f;
+#X obj 166 125 * 1000;
 #X connect 0 0 2 0;
 #X connect 1 0 5 0;
 #X connect 2 0 1 0;
@@ -800,12 +801,14 @@
 #X connect 19 0 17 1;
 #X connect 20 0 26 0;
 #X connect 21 0 20 0;
+#X connect 21 0 28 0;
 #X connect 22 0 24 0;
 #X connect 23 0 25 0;
 #X connect 24 0 7 0;
 #X connect 25 0 6 1;
 #X connect 26 0 23 0;
 #X connect 27 0 8 1;
+#X connect 28 0 25 1;
 #X restore 938 18 pd noise-----------;
 #N canvas 371 47 909 545 synth_waveforms 0;
 #X obj 302 8 / 127;
@@ -823,7 +826,7 @@
 512 0 1;
 #X obj 35 47 mtof;
 #X obj 302 81 vsl 15 80 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 24 1;
 #X obj 35 234 *~;
 #X floatatom 302 -16 5 0 0 0 amp - -;
 #X obj 168 272 loadbang;
@@ -1451,6 +1454,7 @@
 #X restore 277 -8 pd interruptor --------------;
 #X obj 895 248 outlet~;
 #X obj 279 -50 inlet;
+#X text 1005 -62 (0-127);
 #X connect 2 0 5 1;
 #X connect 3 0 2 2;
 #X connect 6 0 9 0;

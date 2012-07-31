@@ -8,3 +8,25 @@ arquivo de texto.;
 3) clique em "grava txt" \; 4) clique em "le txt" \; 5) clique em "rewind
 txt" \; 6) clique em "linha por linha" para visualizar \; a analise
 de cada trecho \;;
+#X obj 200 430 es;
+#X msg 590 594 sequenciador;
+#X msg 644 349 audio entrada;
+#X msg 500 427 altura;
+#X msg 835 473 duração;
+#X msg 767 481 bpm;
+#X msg 658 458 volume;
+#X msg 655 482 volume seq;
+#X msg 475 470 slice x;
+#X msg 834 506 delay;
+#X connect 6 0 9 0;
+#X connect 6 0 5 0;
+#X connect 6 0 10 0;
+#X connect 6 0 7 0;
+#X connect 6 0 8 0;
+#X connect 7 0 12 0;
+#X connect 8 0 13 0;
+#X connect 9 0 5 0;
+#X connect 10 0 11 0;
+#X connect 11 0 5 0;
+#X connect 12 0 5 0;
+#X connect 13 0 5 0;

@@ -1,41 +1,41 @@
-#N canvas 536 95 958 485 10;
+#N canvas 322 95 958 485 10;
 #X obj 451 105 cnv 15 220 110 empty empty sinc-gera_dinamica 20 6 0
 14 -262130 -66577 0;
-#X obj 236 235 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 346 224 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 347 279 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 0 256;
-#X obj 360 153 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 362 281 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 30.12 256;
+#X obj 388 131 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 239 198 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 54.12 256;
+#X obj 267 176 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 28.12 256;
 #X obj 717 268 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 828 313 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 0 256;
+-262144 -1 -1 103.909 256;
 #X obj 718 186 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 829 235 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 0 256;
+-262144 -1 -1 39.7352 256;
 #X obj 718 238 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 236 280 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 452 129 tgl 30 0 empty empty normal 5 -6 0 10 -262144 -1 -1
-1 1;
-#X obj 485 130 tgl 30 0 empty empty empty 5 -6 0 10 -204786 -1 -1 0
+#X obj 452 129 tgl 30 0 empty empty empty 5 -6 0 10 -262144 -1 -1 0
 1;
-#X obj 518 131 tgl 30 0 empty empty empty 5 -6 0 10 -262130 -1 -1 0
+#X obj 485 128 tgl 30 0 empty empty empty 5 -6 0 10 -204786 -1 -1 0
 1;
-#X obj 551 131 tgl 30 0 empty empty empty 5 -6 0 10 -261234 -1 -1 0
+#X obj 518 128 tgl 30 0 empty empty empty 5 -6 0 10 -262130 -1 -1 0
+1;
+#X obj 551 128 tgl 30 0 empty empty empty 5 -6 0 10 -261234 -1 -1 0
 1;
 #X obj 416 345 bng 50 250 50 0 empty empty empty 17 7 0 10 -228856
 -1 -1;
 #X obj 516 185 nbx 4 30 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 40
--262144 -1 -1 54.12 256;
+-262144 -1 -1 39.7352 256;
 #X obj 452 -5 select 0 1 2 3;
 #X obj 452 -24 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
--1 -1 0;
+-1 -1 3;
 #X msg 475 46 0;
 #X msg 514 49 0;
 #X msg 547 47 0;
@@ -51,7 +51,7 @@
 #X obj 78 193 spigot;
 #X msg 91 165 0;
 #X msg 121 165 1;
-#X obj 90 63 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
+#X obj 90 63 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
 ;
 #X obj 91 112 sel 0 1;
 #X obj 78 369 outlet;
@@ -73,7 +73,7 @@
 #X connect 10 0 11 0;
 #X connect 11 0 3 0;
 #X connect 12 0 1 0;
-#X restore 239 173 pd gerador amplitude0;
+#X restore 267 151 pd gerador amplitude0;
 #X obj 516 364 scale.linear 0 100 0 127;
 #X obj 121 251 counter 8;
 #X obj 10 252 spigot;
@@ -83,7 +83,7 @@
 #X obj 121 180 t b b b;
 #N canvas 0 0 450 300 (subpatch) 0;
 #X array \$0-amp_attack 8 float 3;
-#A 0 66.12 68.12 62.12 54.12 50.12 46.12 46.12 50.12;
+#A 0 36.12 28.12 82.12 26.12 94.12 30.12 32.12 30.12;
 #X coords 0 100 8 0 90 50 1;
 #X restore 582 132 graph;
 #X obj 146 224 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -99,25 +99,13 @@
 #X obj 10 36 inlet amp_attack;
 #X obj 146 34 inlet reset;
 #X obj -33 402 outlet array \$0-amp_attack;
-#X obj 239 35 inlet pede amp;
-#N canvas 62 32 559 652 gerador 0;
-#X obj 51 26 inlet;
-#X obj 78 458 tabread ritmo_manipula;
+#X obj 227 -11 inlet pede amp;
+#N canvas 600 24 559 652 gerador 0;
+#X obj 78 36 inlet;
 #X obj 78 427 counter 8;
-#X obj 78 128 delay;
 #X floatatom 78 496 5 0 0 0 - - -;
 #X obj 78 217 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 78 193 spigot;
-#X msg 91 165 0;
-#X msg 121 165 1;
-#X obj 51 57 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
-;
-#X obj 51 79 sel 0 1;
-#X obj 78 105 t b b;
-#X obj 118 524 s tag;
-#X text 158 522 tag: tempo atual gerador;
-#X obj 126 106 r tag;
 #X obj 252 430 random 8;
 #X obj 90 403 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
@@ -145,45 +133,39 @@ possibilidades:;
 #X obj 25 551 outlet;
 #X obj 25 524 delay;
 #X obj 25 500 int;
-#X connect 0 0 9 0;
-#X connect 1 0 4 0;
-#X connect 2 0 1 0;
-#X connect 3 0 6 0;
-#X connect 4 0 12 0;
-#X connect 4 0 34 0;
-#X connect 4 0 37 0;
-#X connect 5 0 18 0;
-#X connect 5 0 20 0;
-#X connect 5 0 23 0;
-#X connect 6 0 5 0;
-#X connect 7 0 6 1;
-#X connect 8 0 6 1;
-#X connect 9 0 10 0;
-#X connect 10 0 7 0;
-#X connect 10 1 11 0;
-#X connect 11 0 3 0;
-#X connect 11 1 8 0;
-#X connect 14 0 3 0;
-#X connect 15 0 1 0;
-#X connect 16 0 2 1;
-#X connect 18 0 19 0;
-#X connect 19 0 16 0;
-#X connect 19 0 25 0;
-#X connect 19 0 21 0;
-#X connect 19 0 26 0;
-#X connect 19 1 22 0;
-#X connect 19 1 24 0;
-#X connect 19 1 27 0;
-#X connect 20 0 15 0;
-#X connect 21 0 20 1;
-#X connect 22 0 20 1;
-#X connect 23 0 2 0;
-#X connect 24 0 23 1;
-#X connect 25 0 23 1;
-#X connect 36 0 35 0;
-#X connect 37 0 36 0;
+#X obj 78 458 tabread \$0-amp_attack;
+#X obj 78 137 spigot;
+#X obj 155 59 inlet;
+#X connect 0 0 28 0;
+#X connect 1 0 27 0;
+#X connect 2 0 23 0;
+#X connect 2 0 26 0;
+#X connect 3 0 7 0;
+#X connect 3 0 9 0;
+#X connect 3 0 12 0;
+#X connect 4 0 27 0;
+#X connect 5 0 1 1;
+#X connect 7 0 8 0;
+#X connect 8 0 5 0;
+#X connect 8 0 14 0;
+#X connect 8 0 10 0;
+#X connect 8 0 15 0;
+#X connect 8 1 11 0;
+#X connect 8 1 13 0;
+#X connect 8 1 16 0;
+#X connect 9 0 4 0;
+#X connect 10 0 9 1;
+#X connect 11 0 9 1;
+#X connect 12 0 1 0;
+#X connect 13 0 12 1;
+#X connect 14 0 12 1;
+#X connect 25 0 24 0;
+#X connect 26 0 25 0;
+#X connect 27 0 2 0;
+#X connect 28 0 3 0;
+#X connect 29 0 28 1;
 #X restore 236 255 pd gerador amplitude1;
-#N canvas 319 129 598 498 gerador 0;
+#N canvas 320 102 598 498 gerador 0;
 #X obj 128 330 brown-rhythm;
 #X floatatom 145 178 4 0 0 2 min_ED - -;
 #X floatatom 168 199 6 0 0 2 max_ED - -;
@@ -193,7 +175,7 @@ possibilidades:;
 #X obj 145 291 unpack f f f f;
 #X obj 152 248 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X floatatom 197 367 5 0 0 0 - - -;
+#X floatatom 197 407 5 0 0 0 - - -;
 #X obj 215 176 / 100;
 #X obj 128 5 inlet;
 #X obj 128 369 outlet;
@@ -206,8 +188,8 @@ possibilidades:;
 #X msg 406 224 max;
 #X obj 351 95 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 332 368 s min_ritmo;
-#X obj 435 369 s max_ritmo;
+#X obj 332 428 s min_ritmo;
+#X obj 435 429 s max_ritmo;
 #X obj 332 346 spigot;
 #X msg 363 318 0;
 #X msg 394 318 1;
@@ -220,11 +202,16 @@ possibilidades:;
 #X text 390 8 atualiza;
 #X obj 128 81 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 197 396 outlet;
+#X obj 197 436 outlet;
 #X obj 389 48 r end;
-#X obj 359 268 tabletool \$0-ritmo_manip;
+#X obj 359 268 tabletool \$0-amp_attack;
+#X obj 75 121 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 332 387 * 10;
+#X obj 435 390 * 10;
+#X obj 197 372 / 3;
 #X connect 0 0 11 0;
-#X connect 0 2 8 0;
+#X connect 0 2 39 0;
 #X connect 1 0 5 0;
 #X connect 1 0 7 0;
 #X connect 2 0 5 1;
@@ -251,10 +238,10 @@ possibilidades:;
 #X connect 17 0 35 0;
 #X connect 18 0 35 0;
 #X connect 19 0 28 0;
-#X connect 22 0 20 0;
+#X connect 22 0 37 0;
 #X connect 23 0 22 1;
 #X connect 24 0 22 1;
-#X connect 25 0 21 0;
+#X connect 25 0 38 0;
 #X connect 26 0 25 1;
 #X connect 27 0 25 1;
 #X connect 28 0 26 0;
@@ -268,6 +255,10 @@ possibilidades:;
 #X connect 34 0 19 0;
 #X connect 35 0 22 0;
 #X connect 35 0 25 0;
+#X connect 36 0 0 0;
+#X connect 37 0 20 0;
+#X connect 38 0 21 0;
+#X connect 39 0 8 0;
 #X restore 718 209 pd gerador amplitude2;
 #N canvas 20 38 559 652 gerador 0;
 #X obj 8 310 tgl 15 0 empty empty start/stop 0 -6 0 8 -262144 -1 -1
@@ -289,11 +280,12 @@ possibilidades:;
 #X obj 29 424 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 29 499 outlet;
-#X obj 193 496 outlet;
+#X obj 256 500 outlet;
 #X obj 8 70 inlet;
 #X obj 43 240 r min_ritmo;
 #X obj 79 265 r max_ritmo;
 #X text 255 200 esse parametro recebera a analise de densidade;
+#X obj 257 466 sinc-escala-linear 0 11 0 127;
 #X connect 0 0 13 0;
 #X connect 3 0 13 6;
 #X connect 4 0 13 5;
@@ -301,7 +293,7 @@ possibilidades:;
 #X connect 6 0 13 3;
 #X connect 7 0 13 2;
 #X connect 8 0 13 1;
-#X connect 11 0 16 0;
+#X connect 12 0 21 0;
 #X connect 13 0 14 0;
 #X connect 13 1 9 0;
 #X connect 13 2 10 0;
@@ -311,6 +303,7 @@ possibilidades:;
 #X connect 17 0 0 0;
 #X connect 18 0 8 0;
 #X connect 19 0 7 0;
+#X connect 21 0 16 0;
 #X restore 717 288 pd gerador amplitude3;
 #X obj 416 402 outlet ataque;
 #X obj 516 401 outlet amp;
@@ -321,12 +314,21 @@ possibilidades:;
 #X msg 742 78 max;
 #X floatatom 710 124 5 0 0 0 - - -;
 #X text 710 56 testando limites amplitude;
-#X obj 9 103 scale.linear 0 127 60 120;
-#X connect 1 0 47 0;
+#X obj 10 103 scale.linear 0 127 60 120;
+#X obj 290 90 s \$0-reset;
+#X obj 799 179 r \$0-reset;
+#X obj 297 123 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 303 45 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X connect 1 0 47 1;
+#X connect 2 0 16 0;
 #X connect 3 0 25 1;
 #X connect 4 0 16 0;
 #X connect 5 0 49 0;
+#X connect 6 0 16 0;
 #X connect 7 0 48 0;
+#X connect 8 0 16 0;
 #X connect 9 0 15 0;
 #X connect 10 0 15 0;
 #X connect 11 0 3 0;
@@ -379,6 +381,8 @@ possibilidades:;
 #X connect 43 0 58 0;
 #X connect 44 0 34 0;
 #X connect 46 0 25 0;
+#X connect 46 0 59 0;
+#X connect 46 0 47 0;
 #X connect 47 0 10 0;
 #X connect 47 1 2 0;
 #X connect 48 0 9 0;
@@ -389,4 +393,8 @@ possibilidades:;
 #X connect 54 0 53 0;
 #X connect 55 0 53 0;
 #X connect 58 0 28 0;
+#X connect 60 0 48 1;
+#X connect 61 0 25 0;
+#X connect 61 0 47 0;
+#X connect 62 0 59 0;
 #X coords 0 -1 1 1 225 120 2 450 100;

@@ -1,4 +1,4 @@
-#N canvas 309 218 821 582 10;
+#N canvas 256 69 968 618 10;
 #X obj 182 302 cnv 15 165 145 empty empty sinc-audioanalise 20 6 0
 14 -262130 -66577 0;
 #X obj 60 235 bonk~;
@@ -6,7 +6,7 @@
 -1;
 #X obj 628 260 pitch;
 #X floatatom 643 161 5 0 0 0 - - -;
-#X obj 628 235 round;
+#X obj 553 235 round;
 #X obj 307 83 *~;
 #X obj 325 54 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 5080 1;
@@ -21,8 +21,8 @@
 -8 0 10 -262144 -1 -1 3960 1;
 #X msg 673 423 label \$1;
 #X obj 673 444 s \$0-nota;
-#X obj 186 419 cnv 15 20 20 empty \$0-nota F3 20 12 1 40 -233017 -1
-0;
+#X obj 186 419 cnv 15 20 20 empty \$0-nota A\$1 20 12 1 40 -233017
+-1 0;
 #X text 185 389 nota de;
 #X text 184 397 entrada;
 #X obj 189 360 bng 30 250 50 0 empty empty empty 17 7 0 10 -4034 -1
@@ -37,7 +37,7 @@
 #X obj 169 480 *~;
 #X obj 298 323 vu 15 120 empty empty -1 -8 0 10 -66577 -1 1 0;
 #X obj 466 129 sigmund~ -hop 4096 pitch notes;
-#N canvas 20 181 718 503 parametros 0;
+#N canvas 21 208 718 503 parametros 0;
 #X msg 25 396 minpower \$1;
 #X text 101 397 50;
 #X text 108 332 7;
@@ -125,7 +125,7 @@ nota;
 #X floatatom 307 227 5 0 0 0 - - -;
 #X obj 307 276 - 100;
 #X obj 479 258 vsl 30 70 0 0.01 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 2512 1;
 #X obj 387 393 s \$0-amp_attack;
 #X text 60 480 bonk;
 #X msg 186 220 0.4;
@@ -236,7 +236,7 @@ nota;
 #X text 762 492 registro;
 #X text 676 337 classe de nota;
 #X text 681 361 nome de nota (symbol);
-#X obj 628 202 f;
+#X obj 554 210 f;
 #X obj 30 309 s \$0_bonk;
 #X obj 562 162 r \$0_bonk;
 #X obj 479 233 dbtorms;
@@ -252,10 +252,16 @@ nota;
 #X floatatom 350 501 5 0 0 0 - - -;
 #X obj 349 477 * 1270;
 #X obj 351 522 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 462 1;
 #X obj 60 461 outlet bonk;
 #X obj 169 504 outlet~ audio;
 #X obj 348 541 outlet amp midi;
+#X floatatom 493 152 5 0 0 0 - - -;
+#X obj 628 227 spigot;
+#X obj 515 556 moses 2;
+#X msg 563 583 1;
+#X msg 510 587 0;
+#X obj 602 526 moses 40;
 #X connect 1 0 2 0;
 #X connect 2 0 21 0;
 #X connect 2 0 52 0;
@@ -266,13 +272,13 @@ nota;
 #X connect 3 3 10 0;
 #X connect 3 4 11 0;
 #X connect 4 0 51 1;
-#X connect 5 0 3 0;
+#X connect 4 0 71 0;
 #X connect 6 0 13 0;
 #X connect 6 0 32 0;
 #X connect 6 0 40 0;
 #X connect 6 0 61 0;
 #X connect 7 0 6 1;
-#X connect 8 0 24 0;
+#X connect 8 0 75 0;
 #X connect 9 0 39 0;
 #X connect 11 0 25 0;
 #X connect 12 0 16 0;
@@ -284,6 +290,7 @@ nota;
 #X connect 23 0 38 0;
 #X connect 26 0 28 1;
 #X connect 28 0 68 0;
+#X connect 30 0 70 0;
 #X connect 30 1 4 0;
 #X connect 31 0 30 0;
 #X connect 32 0 33 0;
@@ -312,4 +319,11 @@ nota;
 #X connect 64 0 66 0;
 #X connect 65 0 64 0;
 #X connect 66 0 69 0;
+#X connect 66 0 72 0;
+#X connect 71 0 3 0;
+#X connect 72 0 74 0;
+#X connect 72 1 73 0;
+#X connect 73 0 71 1;
+#X connect 74 0 71 1;
+#X connect 75 1 24 0;
 #X coords 0 -1 1 1 170 150 1 180 300;

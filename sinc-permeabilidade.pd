@@ -1,4 +1,4 @@
-#N canvas 434 142 705 401 10;
+#N canvas 319 35 705 401 10;
 #X obj 59 33 colecao_vs_pitch;
 #X obj 59 54 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
@@ -6,11 +6,6 @@
 -1;
 #X text 157 78 não está;
 #X text 60 70 está;
-#N canvas 0 0 450 300 (subpatch) 0;
-#X array \$0-nota 7 float 3;
-#A 0 77 77 80 80 57 71 71;
-#X coords 0 127 7 0 90 50 1;
-#X restore 56 233 graph;
 #X obj -207 266 tabwrite \$0-nota;
 #X obj -154 120 f \$0;
 #X obj -187 165 symbol;
@@ -23,13 +18,8 @@
 #X obj -114 244 counter 6;
 #X obj -340 224 s lista_pitch;
 #X obj 152 7 r lista_pitch;
-#X obj 155 232 hsl 100 50 0 6 0 0 empty empty empty -2 -8 0 10 -204786
--1 -1 8250 1;
-#X text 134 269 impermeável;
-#X text 201 231 permeável;
 #X obj 266 62 bng 15 250 50 0 empty empty reset 17 7 0 10 -262144 -1
 -1;
-#X obj 152 308 outlet;
 #X obj 266 -32 inlet reset;
 #X obj 32 -27 inlet classe de nota;
 #X obj 32 4 t b f f;
@@ -50,6 +40,7 @@
 #X obj 117 231 outlet;
 #X msg 49 167 1;
 #X msg 138 76 0;
+#X obj 152 35 loadbang;
 #X connect 0 0 2 0;
 #X connect 0 0 4 0;
 #X connect 1 0 0 1;
@@ -73,27 +64,40 @@
 #X connect 12 0 7 0;
 #X connect 14 0 1 0;
 #X connect 15 0 3 0;
+#X connect 16 0 15 0;
 #X restore 81 109 pd mapeia;
+#X obj 51 206 cnv 15 218 78 empty empty sinc-permeabilidade 70 9 0
+14 -261682 -66577 0;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array \$0-nota 7 float 3;
+#A 0 79 79 74 74 58 74 52;
+#X coords 0 127 7 0 90 50 1;
+#X restore 64 229 graph;
+#X obj 163 228 hsl 100 50 0 6 0 0 empty empty empty -2 -8 0 10 -204786
+-1 -1 1650 1;
+#X text 142 265 impermeável;
+#X text 209 227 permeável;
+#X obj 160 304 outlet;
 #X connect 0 0 1 0;
 #X connect 0 1 2 0;
-#X connect 1 0 26 0;
-#X connect 2 0 26 1;
-#X connect 7 0 10 0;
-#X connect 8 0 12 0;
-#X connect 9 0 7 0;
-#X connect 10 0 8 1;
-#X connect 11 0 6 0;
-#X connect 11 1 15 0;
-#X connect 13 0 16 0;
-#X connect 14 0 13 0;
-#X connect 14 1 11 0;
-#X connect 14 2 8 0;
-#X connect 15 0 6 1;
-#X connect 17 0 0 1;
-#X connect 18 0 22 0;
-#X connect 23 0 21 0;
-#X connect 24 0 25 0;
-#X connect 25 1 14 0;
-#X connect 25 2 0 0;
-#X connect 26 0 18 0;
+#X connect 1 0 21 0;
+#X connect 2 0 21 1;
+#X connect 6 0 9 0;
+#X connect 7 0 11 0;
+#X connect 8 0 6 0;
+#X connect 9 0 7 1;
+#X connect 10 0 5 0;
+#X connect 10 1 14 0;
+#X connect 12 0 15 0;
+#X connect 13 0 12 0;
+#X connect 13 1 10 0;
+#X connect 13 2 7 0;
+#X connect 14 0 5 1;
+#X connect 16 0 0 1;
+#X connect 18 0 17 0;
+#X connect 19 0 20 0;
+#X connect 20 1 13 0;
+#X connect 20 2 0 0;
+#X connect 21 0 24 0;
+#X connect 24 0 27 0;
 #X coords 0 -1 1 1 220 80 1 50 205;

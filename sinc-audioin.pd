@@ -4,12 +4,12 @@
 #X obj 290 27 adc~;
 #X obj 139 154 *~;
 #X obj 209 144 hsl 60 30 0 3 0 0 empty empty empty 3 7 0 10 -262144
--1 -1 0 1;
+-1 -1 3933 1;
 #X obj 206 177 Scope~ 67 46 256 3 128 -1 1 0 0 0 0 102 255 51 135 135
 135 0;
 #X obj 138 237 outlet~;
 #X obj 99 78 spigot~;
-#X obj 206 126 tgl 15 0 empty empty 1 17 7 0 10 -262144 -1 -1 0 1;
+#X obj 206 126 tgl 15 0 empty empty 1 17 7 0 10 -262144 -1 -1 1 1;
 #X obj 388 92 spigot~;
 #X obj 277 127 tgl 15 0 empty empty 2 17 7 0 10 -262144 -1 -1 0 1;
 #X obj 427 146 *~;
@@ -18,6 +18,9 @@
 #X obj 277 177 Scope~ 67 46 256 3 128 -1 1 0 0 0 0 102 255 51 135 135
 135 0;
 #X obj 428 230 outlet~;
+#X obj 167 26 loadbang;
+#X msg 186 56 1;
+#X msg 170 80 2;
 #X connect 1 0 6 0;
 #X connect 1 1 8 0;
 #X connect 2 0 4 0;
@@ -30,4 +33,8 @@
 #X connect 10 0 12 0;
 #X connect 10 0 13 0;
 #X connect 11 0 10 1;
+#X connect 14 0 15 0;
+#X connect 14 0 16 0;
+#X connect 15 0 7 0;
+#X connect 16 0 3 0;
 #X coords 0 -1 1 1 150 130 2 200 100;
