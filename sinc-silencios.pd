@@ -1,0 +1,6 @@
+#N canvas 404 138 450 300 10;
+#X text 92 26 classifica silencios em:;
+#X text 88 59 respiração;
+#X text 92 82 fim de frase;
+#X text 86 108 fim de seção;
+#X text 93 135 comment;
